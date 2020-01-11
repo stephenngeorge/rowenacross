@@ -1,0 +1,33 @@
+
+/// styles text with a coloured backgorund
+///
+/// @author stephen pal-george
+/// @group backgrounds
+///
+/// @param {keyword} $angle - a number of degrees or one of
+/// keywords: to left, to top, to right, to bottom.
+///
+@mixin background--neon-gradient($angle) {
+  background: linear-gradient(
+    $angle,
+    $color--neon-blue,
+    $color--neon-blue-bright,
+    $color--neon-mulberry
+  );
+}
+
+/// styles text with a coloured backgorund
+///
+/// @author stephen pal-george
+/// @group backgrounds
+///
+/// @param {keyword} $angle - a number of degrees or one of
+/// keywords: to left, to top, to right, to bottom.
+///
+@mixin background--base-gradient($angle) {
+  background: linear-gradient(
+    $angle,
+    $color--neon-blue,
+    $color--neon-mulberry
+  );
+}

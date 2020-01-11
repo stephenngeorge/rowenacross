@@ -1,0 +1,30 @@
+.card-block {
+  width: 100%;
+  background-color: rgba($color--neon-blue, .1);
+
+  .card-block__cards-container {
+    width: 90%;
+    max-width: 47rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: visible;
+  }
+
+  .card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 100% !important;
+    margin-bottom: 2rem;
+
+    @include breakpoint("sm") {
+      width: 46%;
+    }
+    @include breakpoint("md") {
+      width: 30%;
+      margin-bottom: 0;
+    }
+  }
+}

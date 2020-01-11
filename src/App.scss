@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+
+$font-weight-bold:              600;
+$font-weight-black:             900;
+$font-weights: (
+  "bold": $font-weight-bold,
+  "black": $font-weight-black
+);
+
+/// overwrite loriss colors
+$color--dark:                 #191919;
+/// setup local colors 
+$color--neon-blue:            #2271D3;
+$color--neon-blue-bright:     #2F9FFF;
+$color--neon-mulberry:        #C64B8C;
+$color: (
+  "neon-blue": $color--neon-blue,
+  "neon-blue-bright": $color--neon-blue-bright,
+  "neon-mulberry": $color--neon-mulberry
+);
+
+// local variables
+$text-glow--white:              0 0 .5rem #fff;
+$text-glow--neon-blue:          0 0 .25rem $color--neon-blue;
+
+@import 'loriss';
+@import './styles/mixins';
+@import './library/library.scss';
+
+// .App {
+//   padding: 10rem;
+// }

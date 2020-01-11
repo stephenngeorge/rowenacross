@@ -1,0 +1,49 @@
+.title-gradient {
+  width: fit-content;
+  h1, h2, h3,
+  h4, h5, h6 {
+    @include background--neon-gradient(to right);
+    border: .25rem solid $color--dark;
+    box-decoration-break: clone;
+    color: inherit;
+    display: inline;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 2;
+    padding: .5rem 1rem;
+    text-shadow: $text-glow--white;
+  }
+}
+
+// create shadow boxes as pseudo elements of heading tag
+.title-gradient.shadows {
+  overflow: visible;
+  position: relative;
+  h1::before, h2::before, h3::before,
+  h4::before, h5::before, h6::before {
+    background: rgba($color--neon-blue-bright, .5);
+    box-shadow: 0 0 1rem .125rem rgba($color--neon-blue-bright, 1);
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: .5rem;
+    top: -.75rem;
+    transform: rotate(-6deg);
+    width: 80%;
+    z-index: -10;
+  }
+
+  h1::after, h2::after, h3::after,
+  h4::after, h5::after, h6::after {
+    background: rgba($color--neon-mulberry, .5);
+    bottom: -1rem;
+    box-shadow: 0 0 1rem .125rem rgba($color--neon-mulberry, 1);
+    content: "";
+    height: 90%;
+    left: .5rem;
+    position: absolute;
+    transform: rotate(-6deg);
+    width: 90%;
+    z-index: $zindex-behind;
+  }
+}

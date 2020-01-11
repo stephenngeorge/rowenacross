@@ -1,0 +1,8 @@
+{
+  "short_name": "Rowena Cross",
+  "name": "Rowena Cross personal website",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
