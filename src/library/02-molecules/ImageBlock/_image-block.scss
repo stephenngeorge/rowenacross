@@ -1,3 +1,5 @@
+$max-width-local:     14rem;
+
 .image-block {
   width:              100%;
   background-color:   $color--grey;
@@ -22,7 +24,7 @@
     }
     @include breakpoint("md") {
       @include set-grid-span(4);
-      max-width: 15rem;
+      max-width: $max-width-local;
     }
 
     flex:             1 0 auto;
@@ -37,7 +39,7 @@
     .cover-image {
       width:          100%;
       min-width:      12rem;
-      height:         15rem;
+      height:         $max-width-local;
 
       img {
         transform:    scale(1.1);
