@@ -10,22 +10,31 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const CoverImage = ({
-  additionalClasses
+  additionalClasses,
+  imageAlt,
+  imageSrc
 }) => {
   const classes = ["cover-image", ...additionalClasses]
   return (
     <div className={`${classes.join(" ")}`}>
-
+      <img
+        data-object-fit="cover"
+        alt={ imageAlt }
+        src={ imageSrc }
+      />
     </div>
   )
 }
 
 CoverImage.propTypes = {
-  additionalClasses: PropTypes.array
+  additionalClasses: PropTypes.array,
+  imageAlt: PropTypes.string,
+  imageSrc: PropTypes.string.isRequired
 }
 
 CoverImage.defaultProps = {
-  additionalClasses: []
+  additionalClasses: [],
+  imageAlt: "image"
 }
 
 export default CoverImage
