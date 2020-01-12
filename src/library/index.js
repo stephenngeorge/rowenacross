@@ -1,4 +1,5 @@
 import {
+  CoverImage,
   TextLink,
   Title,
   TitleGradient
@@ -16,6 +17,7 @@ import {
 export {
   Card,
   CardBlock,
+  CoverImage,
   TextLink,
   Title,
   TitleGradient
