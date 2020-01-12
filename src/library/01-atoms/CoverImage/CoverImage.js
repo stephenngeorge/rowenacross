@@ -3,7 +3,9 @@
  * COVERIMAGE
  * ----------
  * 
- * Comment block, describe your component here
+ * Cover Image components are a div containing
+ * an image with object-fit: cover. Cover Images
+ * are consumed by the ImageBlock component.
  */
 
 import React from "react"

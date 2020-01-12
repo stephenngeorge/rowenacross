@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
-$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$font-family-sans-serif:        'Source Sans Pro', sans-serif;
 
 $font-weight-bold:              600;
 $font-weight-black:             900;
@@ -14,20 +14,27 @@ $color--dark:                 #191919;
 $color--neon-blue:            #2271D3;
 $color--neon-blue-bright:     #2F9FFF;
 $color--neon-mulberry:        #C64B8C;
+$color--grey:                 #F8F8F8;
 $color: (
   "neon-blue": $color--neon-blue,
   "neon-blue-bright": $color--neon-blue-bright,
-  "neon-mulberry": $color--neon-mulberry
+  "neon-mulberry": $color--neon-mulberry,
+  "grey": $color--grey
 );
 
 // local variables
 $text-glow--white:              0 0 .5rem #fff;
 $text-glow--neon-blue:          0 0 .25rem $color--neon-blue;
 
+$shadow-hover:                  0 3px .375rem 0 rgba(0, 0, 0, .7);
+$shadows: (
+  "hover": $shadow-hover
+);
+
 @import 'loriss';
 @import './styles/mixins';
 @import './library/library.scss';
 
-.App {
-  padding: 10rem;
-}
+// .App {
+//   padding: 10rem;
+// }

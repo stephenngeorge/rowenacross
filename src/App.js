@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.scss'
 
-import { CoverImage } from './library'
-import { CoverImageData } from './library/data'
+import { ImageBlock } from './library'
+import { ImageBlockData } from './library/data'
 
 const App = () => (
   <div className="App">
-    <CoverImage { ...CoverImageData } />
+    <ImageBlock { ...ImageBlockData } />
   </div>
 )
 

@@ -1,3 +1,53 @@
 .image-block {
+  width:              100%;
+  background-color:   $color--grey;
+  padding:            2rem 0;
 
+  &__images {
+    width:            90%;
+    max-width:        map-get($breakpoints, "xl");
+    margin:           0 auto;
+    padding:          1rem .5rem;
+
+    display:          flex;
+    flex-flow:        row nowrap;
+    overflow:         scroll;
+  }
+
+  .images__panel {
+    @include set-grid-span(12);
+    @include breakpoint("sm") {
+      @include set-grid-span(6);
+    }
+    @include breakpoint("md") {
+      @include set-grid-span(4);
+      max-width: 15rem;
+    }
+
+    flex:             1 0 auto;
+    margin-right:     1.5rem;
+    box-shadow:       $shadow-bottom;
+    
+    transition:       box-shadow .3s ease-out;
+    &:hover {
+      box-shadow:     $shadow-hover;
+    }
+
+    .cover-image {
+      width:          100%;
+      min-width:      12rem;
+      height:         15rem;
+
+      img {
+        transform:    scale(1.1);
+        filter:       saturate(0);
+
+        transition:   transform .3s ease-out, filter .3s ease-out;
+        &:hover {
+          transform:  scale(1.05);
+          filter:     saturate(50%);
+        }
+      }
+    }
+  }
 }

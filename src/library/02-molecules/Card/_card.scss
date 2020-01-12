@@ -6,7 +6,7 @@
   transition:           box-shadow .2s ease-out;
 
   &:hover {
-    box-shadow:         0 3px .375rem 0 rgba(0, 0, 0, .7);
+    box-shadow:         $shadow-hover;
   }
 
   .title {
