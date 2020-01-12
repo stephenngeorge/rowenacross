@@ -6,7 +6,8 @@ import {
 } from "./01-atoms"
 
 import {
-  Card
+  Card,
+  ImageBlock
 } from "./02-molecules"
 
 import {
@@ -18,6 +19,7 @@ export {
   Card,
   CardBlock,
   CoverImage,
+  ImageBlock,
   TextLink,
   Title,
   TitleGradient
