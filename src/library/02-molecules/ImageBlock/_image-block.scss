@@ -1,6 +1,7 @@
 .image-block {
   width:              100%;
   background-color:   $color--grey;
+  border-top:         1px solid $color--neon-blue-bright;
   padding:            2rem 0;
 
   &__images {
