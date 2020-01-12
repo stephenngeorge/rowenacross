@@ -1,25 +1,25 @@
 .card {
-  max-width: 15rem;
-  padding: 1rem;
-  border-radius: .25rem;
-  box-shadow: 0 3px .5rem 0 rgba(0, 0, 0, .48);
-  transition: box-shadow .2s ease-out;
+  max-width:            15rem;
+  padding:              1rem;
+  border-radius:        .25rem;
+  box-shadow:           $shadow-bottom;
+  transition:           box-shadow .2s ease-out;
 
   &:hover {
-    box-shadow: 0 3px .75rem 0 rgba(0, 0, 0, .64);
+    box-shadow:         0 3px .375rem 0 rgba(0, 0, 0, .7);
   }
 
   .title {
-    border-bottom: 1px solid rgba($color--dark, .1);
-    font-family: $font-family-sans-serif;
-    font-weight: $font-weight-normal;
-    color: $color--neon-blue;
-    text-shadow: $text-glow--neon-blue;
-    text-transform: uppercase;
-    padding-bottom: .5rem;
+    border-bottom:      1px solid rgba($color--dark, .1);
+    font-family:        $font-family-sans-serif;
+    font-weight:        $font-weight-normal;
+    color:              $color--neon-blue;
+    text-shadow:        $text-glow--neon-blue;
+    text-transform:     uppercase;
+    padding-bottom:     .5rem;
   }
 
   p {
-    padding: 1rem 0;
+    padding:            1rem 0;
   }
 }
