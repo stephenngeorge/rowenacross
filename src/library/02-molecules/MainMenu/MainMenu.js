@@ -53,7 +53,7 @@ const MainMenu = ({
     <nav className={`${classes.join(" ")}`}>
       {
         menuItems.length > 0 &&
-        menuItems.map(item => <Link to={ item.path }>{ item.label }</Link>)
+        menuItems.map(item => <Link key={ item.label } to={ item.path }>{ item.label }</Link>)
       }
     </nav>
   )

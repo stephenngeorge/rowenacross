@@ -27,28 +27,28 @@ $max-width-local:     14rem;
       max-width: $max-width-local;
     }
 
-    flex:             1 0 auto;
-    margin-right:     1.5rem;
-    box-shadow:       $shadow-bottom;
+    flex: 1 0 auto;
+    margin-right: 1.5rem;
+    box-shadow: $shadow-bottom;
     
-    transition:       box-shadow .3s ease-out;
+    transition: box-shadow .3s ease-out;
     &:hover {
-      box-shadow:     $shadow-hover;
+      box-shadow: $shadow-hover;
     }
 
     .cover-image {
-      width:          100%;
-      min-width:      12rem;
-      height:         $max-width-local;
+      width: 100%;
+      min-width: 12rem;
+      height: $max-width-local;
 
       img {
-        transform:    scale(1.1);
-        filter:       saturate(0);
+        transform: scale(1.1);
+        filter: saturate(0);
 
-        transition:   transform .3s ease-out, filter .3s ease-out;
+        transition: transform .3s ease-out, filter .3s ease-out;
         &:hover {
-          transform:  scale(1.05);
-          filter:     saturate(50%);
+          transform: scale(1.05);
+          filter: saturate(50%);
         }
       }
     }

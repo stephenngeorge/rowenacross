@@ -15,9 +15,9 @@ const data = {
   // PropName: prop value
   additionalClasses: [
     'font-family--sans-serif',
-    'color--light',
-    'bg--main'
+    'bg--light'
   ],
+  colorTheme: "dark",
   menuItems: [
     {
       label: "talks",
