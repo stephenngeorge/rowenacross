@@ -11,6 +11,7 @@ import { data as TitleGradientData } from './01-atoms/TitleGradient/data'
 // import data objects from 02-molecules
 import { data as CardData } from './02-molecules/Card/data'
 import { data as ImageBlockData } from './02-molecules/ImageBlock/data'
+import { data as MainMenuData } from './02-molecules/MainMenu/data'
 
 // import data objects from 03-organisms
 import { data as CardBlockData } from './03-organisms/CardBlock/data'
@@ -22,5 +23,6 @@ export {
   TitleGradientData,
   CardData,
   ImageBlockData,
+  MainMenuData,
   CardBlockData
 }

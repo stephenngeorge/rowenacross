@@ -7,7 +7,8 @@ import {
 
 import {
   Card,
-  ImageBlock
+  ImageBlock,
+  MainMenu
 } from "./02-molecules"
 
 import {
@@ -20,6 +21,7 @@ export {
   CardBlock,
   CoverImage,
   ImageBlock,
+  MainMenu,
   TextLink,
   Title,
   TitleGradient
