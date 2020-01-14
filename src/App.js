@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.scss'
 
-import { MainMenu } from './library'
-import { MainMenuData } from './library/data'
+import { Icon } from './library'
+import { IconData } from './library/data'
 
 const App = () => (
   <div className="App">
-    <MainMenu { ...MainMenuData } />
+    <Icon { ...IconData } />
   </div>
 )
 

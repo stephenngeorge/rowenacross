@@ -1,5 +1,6 @@
 import {
   CoverImage,
+  Icon,
   TextLink,
   Title,
   TitleGradient
@@ -20,6 +21,7 @@ export {
   Card,
   CardBlock,
   CoverImage,
+  Icon,
   ImageBlock,
   MainMenu,
   TextLink,
