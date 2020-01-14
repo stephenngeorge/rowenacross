@@ -1,0 +1,3 @@
+export const INVALID_CHILD = "INVALID CHILD"
+export const VALUE_INVALID = "VALUE INVALID"
+export const VALUE_OUT_OF_RANGE = "VALUE OUT OF RANGE"

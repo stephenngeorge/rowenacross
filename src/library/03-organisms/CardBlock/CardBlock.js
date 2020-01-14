@@ -9,6 +9,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import * as errorTypes from '../../../utils/errorTypes'
+
 const CardBlock = ({
   additionalClasses,
   children
@@ -20,7 +22,7 @@ const CardBlock = ({
       const invalidElements = children.filter(element => element.type.name !== "Card")
       if (invalidElements.length > 0) {
         errors.push({
-          type: "INVALID CHILD",
+          type: errorTypes.INVALID_CHILD,
           source: "CardBlock > props.children",
           message: "CardBlock components only accept Card components as children"
         })
@@ -28,7 +30,7 @@ const CardBlock = ({
     }
     else if (!!children && children.type.name !== "Card") {
       errors.push({
-        type: "INVALID CHILD",
+        type: errorTypes.INVALID_CHILD,
         source: "CardBlock > props.children",
         message: "CardBlock components only accept Card components as children"
       })

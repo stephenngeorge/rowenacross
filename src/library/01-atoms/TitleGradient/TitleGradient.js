@@ -14,6 +14,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import * as errorTypes from '../../../utils/errorTypes'
+
 const TitleGradient = ({
   additionalClasses,
   shadows,
@@ -25,7 +27,7 @@ const TitleGradient = ({
 
     if (titleTag <= 0 || titleTag > 6) {
       errors.push({
-        type: "VALUE OUT OF RANGE",
+        type: errorTypes.VALUE_OUT_OF_RANGE,
         source: "TitleGradient > props.titleTag",
         message: "titleTag prop must be a number between 1 and 6 (inclusive)"
       })
@@ -33,7 +35,7 @@ const TitleGradient = ({
 
     if (titleText.length <= 0) {
       errors.push({
-        type: "VALUE INVALID",
+        type: errorTypes.VALUE_INVALID,
         source: "TitleGradient > props.titleText",
         message: "titleText prop cannot be an empty string"
       })
