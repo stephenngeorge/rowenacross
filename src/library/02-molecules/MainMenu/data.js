@@ -13,6 +13,25 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
+  additionalClasses: [
+    'font-family--sans-serif',
+    'color--light',
+    'bg--main'
+  ],
+  menuItems: [
+    {
+      label: "talks",
+      path: "/talks"
+    },
+    {
+      label: "devotionals",
+      path: "/devotionals"
+    },
+    {
+      label: "contact",
+      path: "/contact"
+    }
+  ]
 }
 
 export {

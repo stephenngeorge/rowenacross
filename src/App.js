@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.scss'
 
-import { ImageBlock } from './library'
-import { ImageBlockData } from './library/data'
+import { MainMenu } from './library'
+import { MainMenuData } from './library/data'
 
 const App = () => (
   <div className="App">
-    <ImageBlock { ...ImageBlockData } />
+    <MainMenu { ...MainMenuData } />
   </div>
 )
 
