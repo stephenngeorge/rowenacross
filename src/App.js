@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.scss'
 
-import { Icon } from './library'
-import { IconData } from './library/data'
+import { IconsBlock } from './library'
+import { IconsBlockData } from './library/data'
 
 const App = () => (
   <div className="App">
-    <Icon { ...IconData } />
+    <IconsBlock { ...IconsBlockData } />
   </div>
 )
 
