@@ -14,7 +14,8 @@ import {
 } from "./02-molecules"
 
 import {
-  CardBlock
+  CardBlock,
+  ImageAndText
 } from "./03-organisms"
 
 
@@ -24,6 +25,7 @@ export {
   CoverImage,
   Icon,
   IconsBlock,
+  ImageAndText,
   ImageBlock,
   MainMenu,
   TextLink,

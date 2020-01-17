@@ -17,6 +17,7 @@ import { data as MainMenuData } from './02-molecules/MainMenu/data'
 
 // import data objects from 03-organisms
 import { data as CardBlockData } from './03-organisms/CardBlock/data'
+import { data as ImageAndTextData } from './03-organisms/ImageAndText/data'
 
 export {
   CoverImageData,
@@ -28,5 +29,6 @@ export {
   IconsBlockData,
   ImageBlockData,
   MainMenuData,
-  CardBlockData
+  CardBlockData,
+  ImageAndTextData
 }
