@@ -65,7 +65,7 @@ Icon.propTypes = {
   additionalClasses: PropTypes.array,
   altText: PropTypes.string,
   icon: PropTypes.string.isRequired,
-  linkUrl: PropTypes.string.isRequired
+  linkUrl: PropTypes.string
 }
 
 Icon.defaultProps = {

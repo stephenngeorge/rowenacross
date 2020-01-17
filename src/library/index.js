@@ -8,6 +8,7 @@ import {
 
 import {
   Card,
+  IconsBlock,
   ImageBlock,
   MainMenu
 } from "./02-molecules"
@@ -22,6 +23,7 @@ export {
   CardBlock,
   CoverImage,
   Icon,
+  IconsBlock,
   ImageBlock,
   MainMenu,
   TextLink,
