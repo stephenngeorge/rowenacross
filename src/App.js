@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.scss'
 
-import { Testimonial } from './library'
-import { TestimonialData } from './library/data'
+import { QuoteBlock } from './library'
+import { QuoteBlockData } from './library/data'
 
 const App = () => (
   <div className="App">
-    <Testimonial { ...TestimonialData } />
+    <QuoteBlock { ...QuoteBlockData } />
   </div>
 )
 

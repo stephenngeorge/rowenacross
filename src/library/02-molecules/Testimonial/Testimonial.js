@@ -39,8 +39,7 @@ Testimonial.propTypes = {
 }
 
 Testimonial.defaultProps = {
-  additionalClasses: [],
-  imageAlt: "Testimonial background image"
+  additionalClasses: []
 }
 
 export default Testimonial

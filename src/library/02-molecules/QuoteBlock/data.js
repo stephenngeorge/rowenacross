@@ -10,9 +10,15 @@
 // and then an "aboutpage" object etc (or use whatever naming convention
 // you like!)
 
+import { BIBLE_BACKGROUND } from '../../../assets'
+
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
+  imageAlt: "close up, blurred photo of an open Bible",
+  imageSrc: BIBLE_BACKGROUND,
+  quotation: "But my life is worth nothing to me unless I use it for finishing the work assigned me by the Lord Jesus—the work of telling others the Good News about the wonderful grace of God.",
+  quoteSource: "Acts 20:24"
 }
 
 export {
