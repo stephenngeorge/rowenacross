@@ -1,5 +1,11 @@
 .cover-image {
+  // background color shows whilst image is loading
+  background-color: $color--light;
+  
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 100%;

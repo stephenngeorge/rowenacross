@@ -1,3 +1,38 @@
 .image-and-text {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: visible;
 
+  > * {
+    @include set-grid-span(12);
+    @include breakpoint("lg") {
+      @include set-grid-span(6);
+    }
+  }
+
+  &__contents {
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+
+    > * {
+      width: 100%;
+      max-width: 34rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .cover-image {
+    border: none;
+    order: 0;
+    @include breakpoint("lg") {
+      border: 2px solid $color--dark;
+      order: 2;
+    }
+  }
 }
