@@ -11,6 +11,7 @@ import {
   IconsBlock,
   ImageBlock,
   MainMenu,
+  QuoteBlock,
   Testimonial
 } from "./02-molecules"
 
@@ -29,6 +30,7 @@ export {
   ImageAndText,
   ImageBlock,
   MainMenu,
+  QuoteBlock,
   Testimonial,
   TextLink,
   Title,

@@ -14,6 +14,7 @@ import { data as CardData } from './02-molecules/Card/data'
 import { data as IconsBlockData } from './02-molecules/IconsBlock/data'
 import { data as ImageBlockData } from './02-molecules/ImageBlock/data'
 import { data as MainMenuData } from './02-molecules/MainMenu/data'
+import { data as QuoteBlockData } from './02-molecules/QuoteBlock/data'
 import { data as TestimonialData } from './02-molecules/Testimonial/data'
 
 // import data objects from 03-organisms
@@ -30,6 +31,7 @@ export {
   IconsBlockData,
   ImageBlockData,
   MainMenuData,
+  QuoteBlockData,
   TestimonialData,
   CardBlockData,
   ImageAndTextData
