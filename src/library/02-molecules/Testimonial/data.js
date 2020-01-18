@@ -13,6 +13,8 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
+  testimonialAttribution: "C, Bristol - after hearing some of Ro's teaching",
+  testimonialText: "I would like to thank you for helping me to stand up and be courageous when I needed to take God's path rather than continue to try and walk my own."
 }
 
 export {

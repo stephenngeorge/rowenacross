@@ -1,3 +1,27 @@
 .testimonial {
+  padding: 3rem 0;
+  &__text-content {
+    @include set-grid-span(12);
+    padding: 0 2rem;
+    margin: 0 auto;
 
+    @include breakpoint("md") {
+      @include set-grid-span(8);
+    }
+
+    @include breakpoint("lg") {
+      @include set-grid-span(6);
+      max-width: map-get($theme-breakpoints, "xl") / 2;
+    }
+
+    &--text {
+      font-family: $font-family-cursive;
+      font-size: $font-size-base * 1.8;
+    }
+
+    &--attribution {
+      margin-top: .5rem;
+      color: $color--neon-mulberry;
+    }
+  }
 }
