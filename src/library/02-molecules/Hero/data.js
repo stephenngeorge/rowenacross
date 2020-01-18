@@ -10,9 +10,15 @@
 // and then an "aboutpage" object etc (or use whatever naming convention
 // you like!)
 
+import { RO_MAIN } from '../../../assets'
+
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
+  imageAlt: "Ro speaking at Joy at Kempton",
+  imageSrc: RO_MAIN,
+  titleTag: 1,
+  titleText: "Rowena Cross"
 }
 
 export {

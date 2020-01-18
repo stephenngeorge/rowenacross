@@ -35,6 +35,6 @@ $shadows: (
 @import './styles/mixins';
 @import './library/library.scss';
 
-// .App {
-//   padding: 10rem;
-// }
+.App {
+  min-height: 100vh;
+}

@@ -32,6 +32,7 @@
     order: 0;
     @include breakpoint("lg") {
       border: 2px solid $color--dark;
+      border-bottom-width: 0;
       order: 2;
     }
   }
