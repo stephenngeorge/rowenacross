@@ -1,10 +1,17 @@
 .main-menu {
   width: 100%;
   height: 5rem;
-  display: flex;
-  justify-content: center;
   box-shadow: none;
   background-color: rgba($color--dark, 0);
+  button {
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
 
   transition: height .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, background-color .2s ease-out;
 
@@ -42,11 +49,19 @@
     color: $color--light;
     z-index: 1;
     &::after {
+      display: none;
+      @include breakpoint("md") {
+        display: block;
+      }
       background-color: rgba($color--neon-mulberry, .5);
       z-index: -1;
     }
 
     &:hover::after {
+      display: none;
+      @include breakpoint("md") {
+        display: block;
+      }
       box-shadow: 0 0 1rem .125rem rgba($color--neon-mulberry, 1);
     }
   }
@@ -61,6 +76,10 @@
     color: $color--light;
     z-index: 1;
     &::after {
+      display: none;
+      @include breakpoint("md") {
+        display: block;
+      }
       background-color: rgba($color--neon-blue-bright, .5);
       width: 60%;
       height: 2rem;
@@ -68,7 +87,91 @@
     }
 
     &:hover::after {
+      display: none;
+      @include breakpoint("md") {
+        display: block;
+      }
       box-shadow: 0 0 1rem .125rem rgba($color--neon-blue-bright, 1);
     }
+  }
+}
+
+.menu--collapsed {
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3.5rem;
+    padding: 0 1.5rem;
+    background: $color--dark;
+    border: 1px solid $color--dark;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      div[class^="menu-icon--"] {
+        width: 90%;
+      }
+    }
+  }
+
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  .main-menu__items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    top: 3.5rem;
+    left: -100%;
+    overflow: hidden;
+    background: $color--dark;
+    
+    a {
+      background: $color--dark;
+      padding: 1.5rem 0;
+    }
+
+    transition: left .3s;
+  }
+  
+  .menu-items-onscreen {
+    left: 0;
+    box-shadow: 0 0 0 800px rgba($color--dark, .4);
+  }
+}
+
+.menu-icon {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+
+  > div {
+    position: absolute;
+    right: 0;
+    height: .2rem;
+    background-color: $color--light;
+    transition: width .2s ease;
+  }
+
+  &--top {
+    width: 100%;
+    top: 10%;
+  }
+
+  &--middle {
+    width: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--bottom {
+    bottom: 10%;
+    width: 80%;
   }
 }

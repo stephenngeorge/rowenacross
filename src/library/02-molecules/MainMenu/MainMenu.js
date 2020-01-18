@@ -37,6 +37,21 @@ const MainMenu = ({
     return () => window.removeEventListener("scroll", switchTheme)
   }, [colorTheme])
 
+  useEffect(() => {
+    const setMenuLayout = () => {
+      const mainMenu = document.querySelector(".main-menu")
+  
+      if (mainMenu !== null && mainMenu !== undefined) {
+        window.innerWidth <= 767 ? mainMenu.classList.add('menu--collapsed') : mainMenu.classList.remove('menu--collapsed')
+      }
+    }
+
+    setMenuLayout()
+    window.addEventListener("resize", setMenuLayout)
+
+    return () => window.removeEventListener("resize", setMenuLayout)
+  }, [])
+
   const validateMenu = colorTheme => {
     let errors = []
 
@@ -55,17 +70,35 @@ const MainMenu = ({
     return errors
   }
 
+  const toggleMenu = () => {
+    const menuItems = document.querySelector('.main-menu__items')
+
+    if (menuItems !== null && menuItems !== undefined) {
+      menuItems.classList.toggle("menu-items-onscreen")
+    }
+  }
+
   const classes = [
     "main-menu",
     `main-menu--${colorTheme}`,
+    window.innerWidth <= 767 ? "menu--collapsed" : "",
     ...additionalClasses
   ]
   return validateMenu(colorTheme).length > 0 ? null : (
     <nav className={`${classes.join(" ")}`}>
-      {
-        menuItems.length > 0 &&
-        menuItems.map(item => <Link key={ item.label } to={ item.path }>{ item.label }</Link>)
-      }
+      <button onClick={ toggleMenu }>
+        <div className="menu-icon">
+          <div className="menu-icon--top"></div>
+          <div className="menu-icon--middle"></div>
+          <div className="menu-icon--bottom"></div>
+        </div>
+      </button>
+      <div className="main-menu__items">
+        {
+          menuItems.length > 0 &&
+          menuItems.map(item => <Link key={ item.label } to={ item.path }>{ item.label }</Link>)
+        }
+      </div>
     </nav>
   )
 }

@@ -26,7 +26,7 @@ const CoverImage = ({
     if (image !== null && image !== undefined) {
       image.style.objectPosition = `${objectPos.x} ${objectPos.y}`
     }
-  }, [objectPos])
+  }, [objectPos, parentScope])
 
   const validateCoverImage = (objectPos) => {
     let errors = []
