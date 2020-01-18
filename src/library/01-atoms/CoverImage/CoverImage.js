@@ -17,10 +17,11 @@ const CoverImage = ({
   additionalClasses,
   imageAlt,
   imageSrc,
-  objectPos
+  objectPos,
+  parentScope
 }) => {
   useEffect(() => {
-    const image = document.querySelector(".cover-image img")
+    const image = document.querySelector(`${parentScope} .cover-image img`)
 
     if (image !== null && image !== undefined) {
       image.style.objectPosition = `${objectPos.x} ${objectPos.y}`
@@ -61,7 +62,8 @@ CoverImage.propTypes = {
   additionalClasses: PropTypes.array,
   imageAlt: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
-  objectPos: PropTypes.object
+  objectPos: PropTypes.object,
+  parentScope: PropTypes.string
 }
 
 CoverImage.defaultProps = {

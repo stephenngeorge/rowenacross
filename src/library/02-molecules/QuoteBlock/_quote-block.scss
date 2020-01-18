@@ -12,6 +12,10 @@
     top: 0;
     left: 0;
     z-index: -100;
+
+    img {
+      opacity: .6;
+    }
   }
 
   &__text-content {
@@ -32,6 +36,7 @@
       font-family: $font-family-cursive;
       font-size: $font-size-base * 2;
       text-align: center;
+      text-shadow: $text-glow--white;
     }
 
     &--source {

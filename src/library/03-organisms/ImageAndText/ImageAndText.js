@@ -63,7 +63,7 @@ const ImageAndText = ({
       <div className="image-and-text__contents">
         { children }
       </div>
-      <CoverImage imageAlt={ imageAlt } imageSrc={ imageSrc } objectPos={ imagePos } />
+      <CoverImage imageAlt={ imageAlt } imageSrc={ imageSrc } objectPos={ imagePos } parentScope=".image-and-text" />
     </section>
   )
 }

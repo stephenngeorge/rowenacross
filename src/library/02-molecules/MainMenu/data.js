@@ -18,6 +18,10 @@ const data = {
   ],
   menuItems: [
     {
+      label: "home",
+      path: "/"
+    },
+    {
       label: "talks",
       path: "/talks"
     },

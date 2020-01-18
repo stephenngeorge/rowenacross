@@ -28,7 +28,7 @@ const MainMenu = ({
   const [colorTheme, setColorTheme] = useState("light")
   useEffect(() => {
     const switchTheme = () => {
-      window.scrollY > window.innerHeight / 3 ? setColorTheme("dark") : setColorTheme("light")
+      window.scrollY > window.innerHeight / 4 ? setColorTheme("dark") : setColorTheme("light")
     }
 
     switchTheme()

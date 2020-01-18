@@ -19,7 +19,7 @@ const data = {
   imageAlt: "Ro close up",
   imagePos: {
     x: "0",
-    y: "35%"
+    y: "30%"
   },
   imageSrc: RO_SMILING
 }
