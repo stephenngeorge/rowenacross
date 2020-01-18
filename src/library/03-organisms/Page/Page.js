@@ -9,7 +9,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { MainMenu } from '../../02-molecules'
+import { Footer, MainMenu } from '../../02-molecules'
 import { data as MainMenuData } from '../../02-molecules/MainMenu/data'
 
 const Page = ({
@@ -26,6 +26,11 @@ const Page = ({
       <main>
         { children }
       </main>
+
+      <Footer>
+        <p>Designed and built by Stephen Pal-George.</p>
+        <p>Built with <a href="https://github.com/stephenngeorge/loris-react/blob/master/README.md">loris-react</a></p>
+      </Footer>
     </div>
   )
 }

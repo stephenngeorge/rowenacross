@@ -21,6 +21,10 @@
     margin-bottom: 2rem;
     z-index: 1;
 
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
     @include breakpoint("sm") {
       width: 46%;
     }

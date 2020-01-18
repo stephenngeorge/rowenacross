@@ -10,13 +10,14 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const Footer = ({
-  additionalClasses
+  additionalClasses,
+  children
 }) => {
   const classes = ["footer", ...additionalClasses]
   return (
-    <div className={`${classes.join(" ")}`}>
-
-    </div>
+    <footer className={`${classes.join(" ")}`}>
+      { children }
+    </footer>
   )
 }
 
