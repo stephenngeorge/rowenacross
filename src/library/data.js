@@ -21,6 +21,7 @@ import { data as TestimonialData } from './02-molecules/Testimonial/data'
 // import data objects from 03-organisms
 import { data as CardBlockData } from './03-organisms/CardBlock/data'
 import { data as ImageAndTextData } from './03-organisms/ImageAndText/data'
+import { data as PageData } from './03-organisms/Page/data'
 
 export {
   CoverImageData,
@@ -36,5 +37,6 @@ export {
   QuoteBlockData,
   TestimonialData,
   CardBlockData,
-  ImageAndTextData
+  ImageAndTextData,
+  PageData
 }

@@ -18,7 +18,8 @@ import {
 
 import {
   CardBlock,
-  ImageAndText
+  ImageAndText,
+  Page
 } from "./03-organisms"
 
 
@@ -32,6 +33,7 @@ export {
   ImageAndText,
   ImageBlock,
   MainMenu,
+  Page,
   QuoteBlock,
   Testimonial,
   TextLink,

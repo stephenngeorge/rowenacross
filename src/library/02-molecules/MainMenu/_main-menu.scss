@@ -3,6 +3,10 @@
   height: 5rem;
   display: flex;
   justify-content: center;
+  box-shadow: none;
+  background-color: rgba($color--dark, 0);
+
+  transition: height .2s ease-out, color .2s ease-out, box-shadow .2s ease-out, background-color .2s ease-out;
 
   a {
     display: flex;
@@ -49,11 +53,17 @@
 }
 
 .main-menu--dark {
+  height: 3.5rem;
+  background-color: rgba($color--dark, .98);
+  box-shadow: $shadow-bottom;
+
   a {
-    color: $color--dark;
+    color: $color--light;
     z-index: 1;
     &::after {
       background-color: rgba($color--neon-blue-bright, .5);
+      width: 60%;
+      height: 2rem;
       z-index: -1;
     }
 

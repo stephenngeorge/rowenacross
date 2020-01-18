@@ -17,15 +17,26 @@
  * }
  */
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
 const MainMenu = ({
   additionalClasses,
-  colorTheme,
   menuItems
 }) => {
+  const [colorTheme, setColorTheme] = useState("light")
+  useEffect(() => {
+    const switchTheme = () => {
+      window.scrollY > window.innerHeight / 3 ? setColorTheme("dark") : setColorTheme("light")
+    }
+
+    switchTheme()
+    window.addEventListener("scroll", switchTheme)
+
+    return () => window.removeEventListener("scroll", switchTheme)
+  }, [colorTheme])
+
   const validateMenu = colorTheme => {
     let errors = []
 
@@ -61,13 +72,11 @@ const MainMenu = ({
 
 MainMenu.propTypes = {
   additionalClasses: PropTypes.array,
-  colorTheme: PropTypes.string,
   menuItems: PropTypes.array.isRequired
 }
 
 MainMenu.defaultProps = {
-  additionalClasses: [],
-  colorTheme: "light"
+  additionalClasses: []
 }
 
 export default MainMenu
