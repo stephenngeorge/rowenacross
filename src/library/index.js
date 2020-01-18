@@ -8,6 +8,7 @@ import {
 
 import {
   Card,
+  Hero,
   IconsBlock,
   ImageBlock,
   MainMenu,
@@ -25,6 +26,7 @@ export {
   Card,
   CardBlock,
   CoverImage,
+  Hero,
   Icon,
   IconsBlock,
   ImageAndText,
