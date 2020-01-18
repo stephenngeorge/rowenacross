@@ -8,6 +8,7 @@ import {
 
 import {
   Card,
+  Footer,
   Hero,
   IconsBlock,
   ImageBlock,
@@ -27,6 +28,7 @@ export {
   Card,
   CardBlock,
   CoverImage,
+  Footer,
   Hero,
   Icon,
   IconsBlock,
