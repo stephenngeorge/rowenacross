@@ -10,7 +10,8 @@ import {
   Card,
   IconsBlock,
   ImageBlock,
-  MainMenu
+  MainMenu,
+  Testimonial
 } from "./02-molecules"
 
 import {
@@ -28,6 +29,7 @@ export {
   ImageAndText,
   ImageBlock,
   MainMenu,
+  Testimonial,
   TextLink,
   Title,
   TitleGradient
