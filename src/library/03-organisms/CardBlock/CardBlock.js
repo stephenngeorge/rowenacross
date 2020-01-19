@@ -10,7 +10,7 @@
  * @see 01-atoms/Card
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 
 import * as errorTypes from '../../../utils/errorTypes'
@@ -19,6 +19,29 @@ const CardBlock = ({
   additionalClasses,
   children
 }) => {
+  useEffect(() => {
+    // setup card animation with intersection observer
+    const animateCards = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          Array.from(document.querySelectorAll('.card-block .card')).forEach((card, i) => {
+            card.classList.remove('slide-left-fade-out--medium')
+            card.style.animationDelay = `${i * 200}ms`
+            card.classList.add('slide-right-fade-in--medium')
+          })
+        }
+      })
+    }
+
+    // configure intersection observer
+    let options = { threshold: .4 }
+    let observer = new IntersectionObserver(animateCards, options)
+    let target = document.querySelector('.card-block')
+    observer.observe(target)
+
+    return () => observer.unobserve(target)
+  }, [])
+
   const validateChildren = children => {
     let errors = []
 

@@ -10,6 +10,10 @@ $animation-durations: (
   "slow": $animation-duration-slow
 );
 
+@for $i from 1 through 1000 {
+  .delay--#{num} { animation-delay: $i + "ms"; }
+}
+
 
 // FADES
 // -----
@@ -105,6 +109,40 @@ $animation-durations: (
 
   .slide-left--#{$duration} {
     @extend %slide-left;
+    animation-duration: $value;
+  }
+}
+
+// COMBINATIONS
+// ----------
+@keyframes slide-right-fade-in {
+  from { opacity: 0; transform: translateX(-1rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-left-fade-out {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-1rem); }
+}
+
+%slide-right-fade-in {
+  animation-name: slide-right-fade-in;
+  animation-fill-mode: forwards;
+}
+
+%slide-left-fade-out {
+  animation-name: slide-left-fade-out;
+  animation-fill-mode: forwards;
+}
+
+@each $duration, $value in $animation-durations {
+  .slide-right-fade-in--#{$duration} {
+    @extend %slide-right-fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-left-fade-out--#{$duration} {
+    @extend %slide-left-fade-out;
     animation-duration: $value;
   }
 }
