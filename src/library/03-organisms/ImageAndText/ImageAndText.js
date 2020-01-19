@@ -24,6 +24,7 @@ const ImageAndText = ({
   imagePos,
   imageSrc
 }) => {
+  // position DOM nodes
   useEffect(() => {
     const setHeight = () => {
       const image = document.querySelector(".image-and-text > .cover-image")
@@ -53,6 +54,27 @@ const ImageAndText = ({
     window.addEventListener("resize", setHeight)
 
     return () => window.removeEventListener("resize", setHeight)
+  }, [])
+
+  // animate image
+  useEffect(() => {
+    const animateImage = entries => {
+      entries.forEach(entry => {
+        if (!!entry.isIntersecting) {
+          const image = document.querySelector(".image-and-text .cover-image img")
+          if (image !== null && image !== undefined) {
+            image.classList.add("image-focus")
+          }
+        } 
+      })
+    }
+
+    let target = document.querySelector(".image-and-text")
+    let options = { threshold: .7 }
+    let observer = new IntersectionObserver(animateImage, options)
+    observer.observe(target)
+
+    return () => observer.unobserve(target)
   }, [])
 
   const classes = [

@@ -30,10 +30,23 @@
   .cover-image {
     border: none;
     order: 0;
+    img {
+      filter: blur(3px);
+      transform: scale(1.05);
+    }
     @include breakpoint("lg") {
       border: 2px solid $color--dark;
       border-bottom-width: 0;
       order: 2;
     }
   }
+}
+
+@keyframes image-focus {
+  from { transform: scale(1.05); filter: blur(4px); }
+  to { transform: scale(1); filter: blur(0); }
+}
+
+.image-focus {
+  animation: image-focus $animation-duration-slow forwards;
 }
