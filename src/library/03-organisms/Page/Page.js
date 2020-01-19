@@ -3,7 +3,12 @@
  * PAGE
  * ----------
  * 
- * Comment block, describe your component here
+ * Page components are layout components that wrap 
+ * the app's content in a header & footer. The children 
+ * of <Page> are rendered in a <main> tag.
+ * 
+ * @see 02-molecules/Footer
+ * @see 02-molecules/MainMenu
  */
 
 import React from "react"

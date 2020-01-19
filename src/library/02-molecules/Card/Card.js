@@ -8,7 +8,9 @@
  * These components are comsumed in the 03-organisms/card-block
  * component.
  * 
- * @todo create CardBlock organism
+ * @see 01-atoms/Title
+ * @see 01-atoms/TextLink
+ * 
  */
 
 import React from "react"

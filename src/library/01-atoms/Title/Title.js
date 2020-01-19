@@ -3,7 +3,9 @@
  * TITLE
  * ----------
  * 
- * Comment block, describe your component here
+ * Title components render an <h> tag at a 
+ * specified level.
+ * 
  */
 
 import React from "react"

@@ -7,6 +7,8 @@
  * alongside some text content. Although designed to
  * display text, the content area could, in theory,
  * accept any other component as a child.
+ * 
+ * @see 01-atoms/CoverImage
  */
 
 import React, { useEffect } from "react"

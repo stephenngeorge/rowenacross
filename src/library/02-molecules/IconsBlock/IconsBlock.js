@@ -13,6 +13,9 @@
  * ..linkUrl: string,
  * ..size: string ["xs", "sm", "md", "lg", "xl"]
  * }
+ * 
+ * @see 01-atoms/Icon
+ * 
  */
 
 import React from "react"

@@ -3,7 +3,9 @@
  * FOOTER
  * ----------
  * 
- * Comment block, describe your component here
+ * Footer components render a footer tag and 
+ * any children that are passed in. Footer is 
+ * consumed by '03-organisms/Page'
  */
 
 import React from "react"

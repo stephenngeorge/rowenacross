@@ -12,6 +12,9 @@
  * ..alt: string,
  * ..src: string (filepath)
  * }
+ * 
+ * @see 01-atoms/CoverImage
+ * 
  */
 
 import React from "react"

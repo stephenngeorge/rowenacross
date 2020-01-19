@@ -3,7 +3,12 @@
  * TESTIMONIAL
  * ----------
  * 
- * Comment block, describe your component here
+ * Testimonial components are very similar to Quote 
+ * Block components but they don't have a background 
+ * image, and the text is left aligned.
+ * 
+ * The attribution is optional.
+ * 
  */
 
 import React from "react"

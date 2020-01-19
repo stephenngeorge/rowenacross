@@ -3,7 +3,12 @@
  * HERO
  * ----------
  * 
- * Comment block, describe your component here
+ * Hero components render a large image with an 
+ * overlapping TitleGradient atom.
+ * 
+ * @see 01-atoms/CoverImage
+ * @see 01-atoms/TitleGradient
+ * 
  */
 
 import React, { useEffect } from "react"

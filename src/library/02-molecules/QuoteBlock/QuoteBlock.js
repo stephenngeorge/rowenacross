@@ -3,7 +3,14 @@
  * QUOTEBLOCK
  * ----------
  * 
- * Comment block, describe your component here
+ * Quote Block components render a quotation in a 
+ * cursive font overlaying a full-width background 
+ * image.
+ * 
+ * Quote Blocks also optionally display a quoteSource, 
+ * i.e. the person/book etc from which the quote has 
+ * been taken.
+ * 
  */
 
 import React from "react"

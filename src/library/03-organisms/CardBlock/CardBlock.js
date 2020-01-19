@@ -3,7 +3,11 @@
  * CARDBLOCK
  * ----------
  * 
- * Comment block, describe your component here
+ * Card Block components render a number of Card atoms
+ * on a light background.
+ * 
+ * Children must be <Card />.
+ * @see 01-atoms/Card
  */
 
 import React from "react"
