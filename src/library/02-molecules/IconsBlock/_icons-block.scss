@@ -6,13 +6,15 @@
     margin-right: 3rem;
     opacity: 0;
     transform: translateX(-.5rem);
-    transition: transform .2s ease-out;
     &:nth-last-child(1) {
       margin-right: 0;
     }
 
-    &:hover {
-      transform: translateY(-.25rem);
+    img {
+      transition: transform .2s ease-out;
+      &:hover {
+        transform: translateY(-.25rem);
+      }
     }
   }
 }

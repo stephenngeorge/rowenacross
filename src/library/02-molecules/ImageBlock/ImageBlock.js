@@ -49,7 +49,7 @@ const ImageBlock = ({
   }, [])
   const classes = ["image-block", ...additionalClasses]
   return (
-    <div className={`${classes.join(" ")}`}>
+    <section className={`${classes.join(" ")}`}>
       <div className="image-block__images">
         {
           (images.length > 0 && images.length <= 3) &&
@@ -62,7 +62,7 @@ const ImageBlock = ({
           })
         }
       </div>
-    </div>
+    </section>
   )
 }
 

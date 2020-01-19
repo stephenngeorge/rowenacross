@@ -72,11 +72,11 @@ const CardBlock = ({
 
   const classes = ["card-block", ...additionalClasses]
   return validateChildren(children).length > 0 ? null : (
-    <div className={`${classes.join(" ")}`}>
+    <section className={`${classes.join(" ")}`}>
       <div className="card-block__cards-container">
         { children }
       </div>
-    </div>
+    </section>
   )
 }
 
