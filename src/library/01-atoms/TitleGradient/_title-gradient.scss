@@ -28,9 +28,10 @@
     position: absolute;
     right: .5rem;
     top: -.75rem;
-    transform: rotate(-6deg);
     width: 80%;
     z-index: -10;
+
+    animation: animate-before $animation-duration-medium forwards;
   }
 
   h1::after, h2::after, h3::after,
@@ -42,8 +43,31 @@
     height: 90%;
     left: .5rem;
     position: absolute;
-    transform: rotate(-6deg);
     width: 90%;
     z-index: $zindex-behind;
+
+    animation: animate-after $animation-duration-medium forwards;
+  }
+}
+
+@keyframes animate-before {
+  from {
+    opacity: 0;
+    transform: rotate(-6deg) translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-6deg) translateY(0);
+  }
+}
+
+@keyframes animate-after {
+  from {
+    opacity: 0;
+    transform: rotate(-6deg) translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-6deg) translateY(0);
   }
 }

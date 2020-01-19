@@ -1,0 +1,110 @@
+// ----------
+// ANIMATION VARIABLES
+// ----------
+$animation-duration-fast: .2s;
+$animation-duration-medium: .4s;
+$animation-duration-slow: .8s;
+$animation-durations: (
+  "fast": $animation-duration-fast,
+  "medium": $animation-duration-medium,
+  "slow": $animation-duration-slow
+);
+
+
+// FADES
+// -----
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+%fade-in {
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+}
+
+%fade-out {
+  animation-name: fade-out;
+  animation-fill-mode: forwards;
+}
+
+@each $duration, $value in $animation-durations {
+  .fade-in--#{$duration} {
+    @extend %fade-in;
+    animation-duration: $value;
+  }
+
+  .fade-out--#{$duration} {
+    @extend %fade-out;
+    animation-duration: $value;
+  }
+}
+
+// TRANSLATE
+// ----------
+@keyframes slide-up {
+  from { transform: translateY(-1rem); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { transform: translate(1rem); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slide-right {
+  from { transform: translateX(-1rem); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-left {
+  from { transform: translateX(1rem); }
+  to { transform: translateX(0); }
+}
+
+%slide-up {
+  animation-name: slide-up;
+  animation-fill-mode: forwards;
+}
+
+%slide-down {
+  animation-name: slide-down;
+  animation-fill-mode: forwards;
+}
+
+%slide-right {
+  animation-name: slide-right;
+  animation-fill-mode: forwards;
+}
+
+%slide-left {
+  animation-name: slide-left;
+  animation-fill-mode: forwards;
+}
+
+@each $duration, $value in $animation-durations {
+  .slide-up--#{$duration} {
+    @extend %slide-up;
+    animation-duration: $value;
+  }
+
+  .slide-down--#{$duration} {
+    @extend %slide-down;
+    animation-duration: $value;
+  }
+
+  .slide-right--#{$duration} {
+    @extend %slide-right;
+    animation-duration: $value;
+  }
+
+  .slide-left--#{$duration} {
+    @extend %slide-left;
+    animation-duration: $value;
+  }
+}

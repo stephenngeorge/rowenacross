@@ -53,6 +53,7 @@ const TitleGradient = ({
   const classes = [
     "title-gradient",
     !!shadows ? "shadows" : "",
+    'fade-in--fast',
     ...additionalClasses
   ]
   return validateTitle(titleTag, titleText).length > 0 ? null : (
