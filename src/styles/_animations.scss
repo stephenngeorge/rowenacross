@@ -125,6 +125,11 @@ $animation-durations: (
   to { opacity: 0; transform: translateX(-1rem); }
 }
 
+@keyframes slide-up-fade-in {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 %slide-right-fade-in {
   animation-name: slide-right-fade-in;
   animation-fill-mode: forwards;
@@ -132,6 +137,11 @@ $animation-durations: (
 
 %slide-left-fade-out {
   animation-name: slide-left-fade-out;
+  animation-fill-mode: forwards;
+}
+
+%slide-up-fade-in {
+  animation-name: slide-up-fade-in;
   animation-fill-mode: forwards;
 }
 
@@ -143,6 +153,11 @@ $animation-durations: (
 
   .slide-left-fade-out--#{$duration} {
     @extend %slide-left-fade-out;
+    animation-duration: $value;
+  }
+  
+  .slide-up-fade-in--#{$duration} {
+    @extend %slide-up-fade-in;
     animation-duration: $value;
   }
 }

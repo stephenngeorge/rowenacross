@@ -17,7 +17,7 @@
  * 
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 
 import { CoverImage } from '../../01-atoms'
@@ -26,6 +26,27 @@ const ImageBlock = ({
   additionalClasses,
   images
 }) => {
+  // animate images
+  useEffect(() => {
+    const animateImages = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let images = Array.from(document.querySelectorAll('.image-block .images__panel'))
+          images.forEach((image, i) => {
+            image.style.animationDelay = `${i * 200}ms`
+            image.classList.add('slide-up-fade-in--medium')
+          })
+        }
+      })
+    }
+
+    let target = document.querySelector(".image-block")
+    let options = { threshold: .4 }
+    let observer = new IntersectionObserver(animateImages, options)
+    observer.observe(target)
+
+    return () => observer.unobserve(target)
+  }, [])
   const classes = ["image-block", ...additionalClasses]
   return (
     <div className={`${classes.join(" ")}`}>

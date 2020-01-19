@@ -30,6 +30,8 @@ $max-width-local:     14rem;
     flex: 1 0 auto;
     margin-right: 1.5rem;
     box-shadow: $shadow-bottom;
+    opacity: 0;
+    transform: translateY(1rem);
     
     transition: box-shadow .3s ease-out;
     &:hover {
