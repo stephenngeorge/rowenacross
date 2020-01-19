@@ -18,7 +18,7 @@
  * 
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 
 import { Icon } from '../../01-atoms'
@@ -27,6 +27,28 @@ const IconsBlock = ({
   additionalClasses,
   icons
 }) => {
+  // animate icons
+  useEffect(() => {
+    const animateIcons = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const icons = Array.from(document.querySelectorAll('.icons-block .icon'))
+          icons.forEach((icon, i) => {
+            icon.style.animationDelay = `${i * 200}ms`
+            icon.classList.add("icon-in")
+          })
+        }
+      })
+    }
+
+    let target = document.querySelector(".icons-block")
+    let options = { threshold: 1 }
+    let observer = new IntersectionObserver(animateIcons, options)
+    observer.observe(target)
+
+    return () => observer.unobserve(target)
+  }, [])
+
   const classes = ["icons-block", ...additionalClasses]
   return (
     <div className={`${classes.join(" ")}`}>

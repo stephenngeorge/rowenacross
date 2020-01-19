@@ -31,8 +31,7 @@
     border: none;
     order: 0;
     img {
-      filter: blur(3px);
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
     @include breakpoint("lg") {
       border: 2px solid $color--dark;
@@ -43,8 +42,8 @@
 }
 
 @keyframes image-focus {
-  from { transform: scale(1.05); filter: blur(4px); }
-  to { transform: scale(1); filter: blur(0); }
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
 }
 
 .image-focus {
