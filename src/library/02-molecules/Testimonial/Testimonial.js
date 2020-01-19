@@ -11,7 +11,7 @@
  * 
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 
 const Testimonial = ({
@@ -19,6 +19,28 @@ const Testimonial = ({
   testimonialAttribution,
   testimonialText
 }) => {
+  useEffect(() => {
+    const animateText = entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let text = document.querySelector(".testimonial__text-content--text")
+          let attribution = document.querySelector(".testimonial__text-content--attribution")
+
+          text.classList.add('slide-right-fade-in--medium')
+          attribution.style.animationDelay = "200ms"
+          attribution.classList.add('slide-up-fade-in--medium')
+        }
+      })
+    }
+
+    let target = document.querySelector('.testimonial')
+    let options = { threshold: .7 }
+    let observer = new IntersectionObserver(animateText, options)
+    observer.observe(target)
+
+    return () => observer.unobserve(target)
+  }, [])
+
   const classes = ["testimonial", ...additionalClasses]
   return (
     <section className={`${classes.join(" ")}`}>

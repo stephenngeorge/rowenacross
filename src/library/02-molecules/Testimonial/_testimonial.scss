@@ -15,11 +15,15 @@
     }
 
     &--text {
+      opacity: 0;
+      transform: translateX(-1rem);
       font-family: $font-family-cursive;
       font-size: $font-size-base * 1.8;
     }
 
     &--attribution {
+      opacity: 0;
+      transform: translateY(1rem);
       margin-top: .5rem;
       color: $color--neon-mulberry;
     }
