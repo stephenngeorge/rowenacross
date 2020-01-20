@@ -1,6 +1,14 @@
 .page {
+  min-height: 100vh;
+  position: relative;
+
   .main-menu {
     position: fixed;
     z-index: $zindex-foreground;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
   }
 }

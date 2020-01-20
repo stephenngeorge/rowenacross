@@ -11,7 +11,7 @@
  * @see 02-molecules/MainMenu
  */
 
-import React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 
 import { Footer, MainMenu } from '../../02-molecules'
@@ -21,6 +21,22 @@ const Page = ({
   additionalClasses,
   children
 }) => {
+  useEffect(() => {
+    const addPadding = () => {
+      let page = document.querySelector('.page')
+      let footer = document.querySelector('.footer')
+      if (page !== null && page !== undefined && footer !== null && footer !== undefined) {
+        let footerHeight = footer.clientHeight
+        page.style.paddingBottom = `${footerHeight}px`
+      }
+    }
+    
+    addPadding()
+    window.addEventListener("resize", addPadding)
+
+    return () => window.removeEventListener("resize", addPadding)
+  }, [])
+
   const classes = ["page", ...additionalClasses]
   return (
     <div className={`${classes.join(" ")}`}>
