@@ -45,6 +45,11 @@
 }
 
 .main-menu--light {
+  background: linear-gradient(
+    to bottom,
+    rgba($color--dark, .98),
+    rgba($color--dark, 0)
+  );
   a {
     color: $color--light;
     z-index: 1;
