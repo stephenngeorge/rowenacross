@@ -43,7 +43,7 @@ const ImageBlock = ({
     let target = document.querySelector(".image-block")
     let options = { threshold: .4 }
     let observer = new IntersectionObserver(animateImages, options)
-    observer.observe(target)
+    if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
   }, [])

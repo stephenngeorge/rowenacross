@@ -44,7 +44,7 @@ const IconsBlock = ({
     let target = document.querySelector(".icons-block")
     let options = { threshold: 1 }
     let observer = new IntersectionObserver(animateIcons, options)
-    observer.observe(target)
+    if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
   }, [])

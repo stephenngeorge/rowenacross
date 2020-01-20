@@ -72,7 +72,7 @@ const ImageAndText = ({
     let target = document.querySelector(".image-and-text")
     let options = { threshold: .5 }
     let observer = new IntersectionObserver(animateImage, options)
-    observer.observe(target)
+    if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
   }, [])

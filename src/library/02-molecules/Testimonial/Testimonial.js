@@ -36,7 +36,7 @@ const Testimonial = ({
     let target = document.querySelector('.testimonial')
     let options = { threshold: .7 }
     let observer = new IntersectionObserver(animateText, options)
-    observer.observe(target)
+    if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
   }, [])
