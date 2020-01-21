@@ -41,6 +41,10 @@ $shadows: (
 @import './styles/animations';
 @import './library/library.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   min-height: 100vh;
 }

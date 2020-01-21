@@ -18,15 +18,20 @@ const TextLink = ({
   additionalClasses,
   linkText,
   linkUrl,
-  linkVariation
+  linkVariation,
+  newPage
 }) => {
+  const handleClick = () => {
+    if (!!newPage) window.scrollTo(0, 0)
+  }
+  
   const classes = ["text-link", ...additionalClasses]
   return linkVariation === "internal" ? (
-    <Link to={ linkUrl } className={`${classes.join(" ")}`}>
+    <Link onClick={ handleClick } to={ linkUrl } className={`${classes.join(" ")}`}>
       { linkText }
     </Link>
   ) : (
-    <a href={ linkUrl }>
+    <a onClick={ handleClick } href={ linkUrl }>
       { linkText }
     </a>
   )
@@ -36,12 +41,14 @@ TextLink.propTypes = {
   additionalClasses: PropTypes.array,
   linkText: PropTypes.string.isRequired,
   linkUrl: PropTypes.string.isRequired,
-  linkVariation: PropTypes.string // <-- one of 'internal' or 'external'
+  linkVariation: PropTypes.string, // <-- one of 'internal' or 'external'
+  newPage: PropTypes.bool
 }
 
 TextLink.defaultProps = {
   additionalClasses: [],
-  linkVariation: "internal"
+  linkVariation: "internal",
+  newPage: true
 }
 
 export default TextLink

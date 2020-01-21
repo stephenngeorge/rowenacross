@@ -71,6 +71,8 @@
 .article--full {
   width: 100% !important;
   min-height: 50vh;
+  border-top: .25rem solid $color--neon-mulberry;
+  border-bottom: .25rem solid $color--neon-mulberry;
 
   .article__text-content {
     @include set-grid-span(8);

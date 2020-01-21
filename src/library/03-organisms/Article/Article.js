@@ -73,7 +73,12 @@ const Article = ({
         </div>
       </div>
       <div className="article__button-container">
-        <TextLink additionalClasses={['article__read-more-link']} linkText={ linkText } linkUrl={ linkUrl } linkVariation="internal" />
+        <TextLink additionalClasses={['article__read-more-link']}
+                  linkText={ linkText }
+                  linkUrl={ linkUrl }
+                  linkVariation="internal"
+                  newPage={ false }
+                />
       </div>
     </section>
   )

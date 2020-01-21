@@ -22,7 +22,7 @@ import {
 } from '../library/data'
 
 const Homepage = () => (
-  <>
+  <div className="slide-left-fade-in--slow">
     <Hero { ...HeroData } />
     <CardBlock>
       <Card { ...CardData.cardBlockOne } />
@@ -52,7 +52,7 @@ const Homepage = () => (
     <ImageBlock { ...ImageBlockData } />
     <Testimonial { ...TestimonialData } />
     <QuoteBlock { ...QuoteBlockData } />
-  </>
+  </div>
 )
 
 export default Homepage

@@ -105,7 +105,7 @@ const MainMenu = ({
       <div className="main-menu__items">
         {
           menuItems.length > 0 &&
-          menuItems.map(item => <Link key={ item.label } to={ item.path }>{ item.label }</Link>)
+          menuItems.map(item => <Link onClick={() => window.scrollTo(0, 0)} key={ item.label } to={ item.path }>{ item.label }</Link>)
         }
       </div>
     </nav>
