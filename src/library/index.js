@@ -19,6 +19,7 @@ import {
 
 import {
   Article,
+  ArticleList,
   CardBlock,
   ImageAndText,
   Page
@@ -27,6 +28,7 @@ import {
 
 export {
   Article,
+  ArticleList,
   Card,
   CardBlock,
   CoverImage,
