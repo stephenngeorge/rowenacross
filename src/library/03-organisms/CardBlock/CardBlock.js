@@ -38,7 +38,7 @@ const CardBlock = ({
     if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
-  }, [window.innerWidth])
+  }, [])
 
   const classes = ["card-block", ...additionalClasses]
   return (
