@@ -1,0 +1,27 @@
+.article {
+  padding: 1.25rem;
+  border-radius: .25rem;
+  box-shadow: $base-shadow;
+
+  p {
+    color: $color--dark;
+  }
+
+  a {
+    color: $color--neon-mulberry;
+    text-decoration: underline;
+    &:hover {
+      color: darken($color--neon-mulberry, 10%);
+    }
+  }
+}
+
+.article--summary {
+  .article__header {
+    padding-bottom: 1rem;
+
+    &--title {
+      color: $color--neon-mulberry;
+    }
+  }
+}

@@ -18,6 +18,7 @@ import {
 } from "./02-molecules"
 
 import {
+  Article,
   CardBlock,
   ImageAndText,
   Page
@@ -25,6 +26,7 @@ import {
 
 
 export {
+  Article,
   Card,
   CardBlock,
   CoverImage,

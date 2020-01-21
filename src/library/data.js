@@ -20,6 +20,7 @@ import { data as QuoteBlockData } from './02-molecules/QuoteBlock/data'
 import { data as TestimonialData } from './02-molecules/Testimonial/data'
 
 // import data objects from 03-organisms
+import { data as ArticleData } from './03-organisms/Article/data'
 import { data as CardBlockData } from './03-organisms/CardBlock/data'
 import { data as ImageAndTextData } from './03-organisms/ImageAndText/data'
 import { data as PageData } from './03-organisms/Page/data'
@@ -38,6 +39,7 @@ export {
   MainMenuData,
   QuoteBlockData,
   TestimonialData,
+  ArticleData,
   CardBlockData,
   ImageAndTextData,
   PageData
