@@ -13,7 +13,7 @@
 import {
   RO_AT_KEMPTON,
   RO_CLOSE_UP,
-  RO_SPEAKING
+  RO_CURTAIN
 } from '../../../assets'
 
 const data = {
@@ -30,7 +30,7 @@ const data = {
     },
     {
       alt: "Ro speaking",
-      src: RO_SPEAKING
+      src: RO_CURTAIN
     }
   ]
 }

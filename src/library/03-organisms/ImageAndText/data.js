@@ -10,7 +10,7 @@
 // and then an "aboutpage" object etc (or use whatever naming convention
 // you like!)
 
-import { RO_SMILING } from '../../../assets'
+import { RO_SPEAKING } from '../../../assets'
 
 const data = {
   // add props here that your component will expect in the format:
@@ -18,10 +18,10 @@ const data = {
   backgroundColor: "light",
   imageAlt: "Ro close up",
   imagePos: {
-    x: "0",
-    y: "30%"
+    x: "50%",
+    y: "50%"
   },
-  imageSrc: RO_SMILING
+  imageSrc: RO_SPEAKING
 }
 
 export {

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+$font-family-serif: 'Bree Serif', serif;
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');
 $font-family-sans-serif:        'Source Sans Pro', sans-serif;
 
@@ -14,11 +17,13 @@ $color--dark:                 #191919;
 $color--neon-blue:            #2271D3;
 $color--neon-blue-bright:     #2F9FFF;
 $color--neon-mulberry:        #C64B8C;
+$color--neon-mulberry-bright: #D781AE;
 $color--grey:                 #F8F8F8;
 $color: (
   "neon-blue": $color--neon-blue,
   "neon-blue-bright": $color--neon-blue-bright,
   "neon-mulberry": $color--neon-mulberry,
+  "neon-mulberry-bright": $color--neon-mulberry-bright,
   "grey": $color--grey
 );
 

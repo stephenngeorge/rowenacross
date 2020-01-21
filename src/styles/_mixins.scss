@@ -31,3 +31,35 @@
     $color--neon-mulberry
   );
 }
+
+/// styles text with a blue backgorund
+///
+/// @author stephen pal-george
+/// @group backgrounds
+///
+/// @param {keyword} $angle - a number of degrees or one of
+/// keywords: to left, to top, to right, to bottom.
+///
+@mixin background--blue-gradient($angle) {
+  background: linear-gradient(
+    $angle,
+    $color--neon-blue,
+    $color--neon-blue-bright
+  );
+}
+
+/// styles text with a mulberry backgorund
+///
+/// @author stephen pal-george
+/// @group backgrounds
+///
+/// @param {keyword} $angle - a number of degrees or one of
+/// keywords: to left, to top, to right, to bottom.
+///
+@mixin background--mulberry-gradient($angle) {
+  background: linear-gradient(
+    $angle,
+    $color--neon-mulberry,
+    $color--neon-mulberry-bright
+  );
+}

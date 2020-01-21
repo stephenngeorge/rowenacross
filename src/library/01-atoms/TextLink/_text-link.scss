@@ -1,5 +1,5 @@
 .text-link {
-  @include background--base-gradient(to right);
+  @include background--mulberry-gradient(to right);
   position: relative;
   border: 3px solid $color--dark;
   color: #fff;
@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    @include background--base-gradient(to left);
+    @include background--mulberry-gradient(to left);
     z-index: -1;
     transition: opacity .4s ease-out;
   }

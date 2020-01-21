@@ -40,7 +40,7 @@ const Hero = ({
   return (
     <section className={`${classes.join(" ")}`}>
       <CoverImage imageAlt={ imageAlt } imageSrc={ imageSrc } />
-      <TitleGradient titleTag={ titleTag } titleText={ titleText } />
+      <TitleGradient titleTag={ titleTag } titleText={ titleText } shadows={ false } />
     </section>
   )
 }

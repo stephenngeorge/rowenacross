@@ -18,7 +18,7 @@ const data = {
     'font-family--sans-serif',
     'font-weight--black'
   ],
-  shadows: true,
+  shadows: false,
   titleTag: 1,
   titleText: "Rowena Cross"
 }

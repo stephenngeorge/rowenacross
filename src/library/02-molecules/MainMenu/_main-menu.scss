@@ -27,19 +27,13 @@
     &::after {
       position: absolute;
       content: "";
-      top: 50%;
+      bottom: 0;
       left: 50%;
-      width: 70%;
-      height: 2.5rem;
-      opacity: 0;
-      border-radius: .25rem;
-      transform: translate(-50%, -50%) rotate(-6deg);
+      width: 0;
+      border-bottom: .25rem solid;
+      transform: translateX(-50%);
 
-      transition: box-shadow .2s ease-out, opacity .15s ease-out;
-    }
-
-    &:hover::after {
-      opacity: 1;
+      transition: width .2s ease-out;
     }
   }
 }
@@ -53,21 +47,29 @@
   a {
     color: $color--light;
     z-index: 1;
-    &::after {
-      display: none;
-      @include breakpoint("md") {
-        display: block;
-      }
-      background-color: rgba($color--neon-mulberry, .5);
-      z-index: -1;
-    }
+    // &::after {
+    //   display: none;
+    //   @include breakpoint("md") {
+    //     display: block;
+    //   }
+    //   background-color: rgba($color--neon-mulberry, .5);
+    //   z-index: -1;
+    // }
 
-    &:hover::after {
-      display: none;
-      @include breakpoint("md") {
-        display: block;
+    // &:hover::after {
+    //   display: none;
+    //   @include breakpoint("md") {
+    //     display: block;
+    //   }
+    //   box-shadow: 0 0 1rem .125rem rgba($color--neon-mulberry, 1);
+    // }
+    &::after {
+      border-color: $color--neon-mulberry;
+    }
+    @include breakpoint("md") {
+      &:hover::after {
+        width: 70%;
       }
-      box-shadow: 0 0 1rem .125rem rgba($color--neon-mulberry, 1);
     }
   }
 }
@@ -80,23 +82,29 @@
   a {
     color: $color--light;
     z-index: 1;
-    &::after {
-      display: none;
-      @include breakpoint("md") {
-        display: block;
-      }
-      background-color: rgba($color--neon-blue-bright, .5);
-      width: 60%;
-      height: 2rem;
-      z-index: -1;
-    }
+    // &::after {
+    //   display: none;
+    //   @include breakpoint("md") {
+    //     display: block;
+    //   }
+    //   background-color: rgba($color--neon-blue-bright, .5);
+    //   width: 60%;
+    //   height: 2rem;
+    //   z-index: -1;
+    // }
 
+    // &:hover::after {
+    //   display: none;
+    //   @include breakpoint("md") {
+    //     display: block;
+    //   }
+    //   box-shadow: 0 0 1rem .125rem rgba($color--neon-blue-bright, 1);
+    // }
+    &::after {
+      border-color: $color--neon-blue-bright;
+    }
     &:hover::after {
-      display: none;
-      @include breakpoint("md") {
-        display: block;
-      }
-      box-shadow: 0 0 1rem .125rem rgba($color--neon-blue-bright, 1);
+      width: 70%;
     }
   }
 }

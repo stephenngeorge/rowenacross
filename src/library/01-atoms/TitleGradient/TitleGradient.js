@@ -52,7 +52,7 @@ const TitleGradient = ({
 
   const classes = [
     "title-gradient",
-    !!shadows ? "shadows" : "",
+    shadows ? "shadows" : "",
     'fade-in--fast',
     ...additionalClasses
   ]
