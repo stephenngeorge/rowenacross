@@ -75,7 +75,13 @@
   border-bottom: .25rem solid $color--neon-mulberry;
 
   .article__text-content {
-    @include set-grid-span(8);
+    @include set-grid-span(12);
+    @include breakpoint("md") {
+      @include set-grid-span(10);
+    }
+    @include breakpoint("lg") {
+      @include set-grid-span(8);
+    }
     margin: 0 auto;
   }
 

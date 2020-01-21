@@ -32,13 +32,13 @@ const CardBlock = ({
     }
 
     // configure intersection observer
-    let options = { threshold: .4 }
+    let options = { threshold: window.innerWidth < 767 ? .1 : .4 }
     let observer = new IntersectionObserver(animateCards, options)
     let target = document.querySelector('.card-block')
     if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
-  }, [])
+  }, [window.innerWidth])
 
   const classes = ["card-block", ...additionalClasses]
   return (

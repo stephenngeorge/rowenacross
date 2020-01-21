@@ -148,6 +148,10 @@
     a {
       background: $color--dark;
       padding: 1.5rem 0;
+
+      &::after {
+        display: none;
+      }
     }
 
     transition: left .3s;

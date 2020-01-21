@@ -28,6 +28,15 @@ const MainMenu = ({
   const location = useLocation()
   const defaultTheme = location.pathname === "/" ? "light" : "dark"
 
+
+  const toggleMenu = () => {
+    const menuItems = document.querySelector('.main-menu__items')
+
+    if (menuItems !== null && menuItems !== undefined) {
+      menuItems.classList.toggle("menu-items-onscreen")
+    }
+  }
+
   const [colorTheme, setColorTheme] = useState(defaultTheme)
   useEffect(() => {
     const switchTheme = () => {
@@ -51,6 +60,9 @@ const MainMenu = ({
   
       if (mainMenu !== null && mainMenu !== undefined) {
         window.innerWidth <= 767 ? mainMenu.classList.add('menu--collapsed') : mainMenu.classList.remove('menu--collapsed')
+        if (mainMenu.classList.contains('menu--collapsed')) {
+          document.querySelector('.menu--collapsed .main-menu__items').addEventListener("click", toggleMenu)
+        }
       }
     }
 
@@ -76,14 +88,6 @@ const MainMenu = ({
     }
 
     return errors
-  }
-
-  const toggleMenu = () => {
-    const menuItems = document.querySelector('.main-menu__items')
-
-    if (menuItems !== null && menuItems !== undefined) {
-      menuItems.classList.toggle("menu-items-onscreen")
-    }
   }
 
   const classes = [
