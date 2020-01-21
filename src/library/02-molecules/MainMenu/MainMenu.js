@@ -18,24 +18,32 @@
  */
 
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import PropTypes from "prop-types"
 
 const MainMenu = ({
   additionalClasses,
   menuItems
 }) => {
-  const [colorTheme, setColorTheme] = useState("light")
+  const location = useLocation()
+  const defaultTheme = location.pathname === "/" ? "light" : "dark"
+
+  const [colorTheme, setColorTheme] = useState(defaultTheme)
   useEffect(() => {
     const switchTheme = () => {
-      window.scrollY > window.innerHeight / 4 ? setColorTheme("dark") : setColorTheme("light")
+      if (location.pathname === "/") {
+        window.scrollY > window.innerHeight / 4 ? setColorTheme("dark") : setColorTheme("light")
+      }
+      else {
+        setColorTheme("dark")
+      }
     }
 
     switchTheme()
     window.addEventListener("scroll", switchTheme)
-
+    
     return () => window.removeEventListener("scroll", switchTheme)
-  }, [colorTheme])
+  }, [colorTheme, location])
 
   useEffect(() => {
     const setMenuLayout = () => {
@@ -84,6 +92,7 @@ const MainMenu = ({
     window.innerWidth <= 767 ? "menu--collapsed" : "",
     ...additionalClasses
   ]
+
   return validateMenu(colorTheme).length > 0 ? null : (
     <nav className={`${classes.join(" ")}`}>
       <button onClick={ toggleMenu }>

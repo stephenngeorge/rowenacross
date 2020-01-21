@@ -12,6 +12,7 @@
  */
 
 import React, { useEffect } from "react"
+import { useLocation } from "react-router-dom"
 import PropTypes from "prop-types"
 
 import { Footer, MainMenu } from '../../02-molecules'
@@ -21,6 +22,8 @@ const Page = ({
   additionalClasses,
   children
 }) => {
+  let location = useLocation()
+
   useEffect(() => {
     const addPadding = () => {
       let page = document.querySelector('.page')
@@ -37,7 +40,11 @@ const Page = ({
     return () => window.removeEventListener("resize", addPadding)
   }, [])
 
-  const classes = ["page", ...additionalClasses]
+  const classes = [
+    "page",
+    location.pathname === "/" ? "" : "page--padding-top",
+    ...additionalClasses
+  ]
   return (
     <div className={`${classes.join(" ")}`}>
       <header>

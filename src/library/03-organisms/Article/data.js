@@ -13,8 +13,9 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  articleSummary: "summary",
+  articleSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ipsum vitae ante pulvinar rutrum at eget ligula. Nullam blandit dapibus pharetra. Nulla vitae pretium diam. Pellentesque vehicula neque faucibus eros scelerisque auctor.",
   displayMode: "summary",
+  linkUrl: "/devotionals/test-article",
   publishedDate: "21/01/2020",
   titleText: "An article"
 }
