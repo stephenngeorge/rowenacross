@@ -14,6 +14,7 @@ import {
   ImageBlock,
   MainMenu,
   QuoteBlock,
+  SearchForm,
   Testimonial
 } from "./02-molecules"
 
@@ -41,6 +42,7 @@ export {
   MainMenu,
   Page,
   QuoteBlock,
+  SearchForm,
   Testimonial,
   TextLink,
   Title,

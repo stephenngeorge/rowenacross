@@ -5,6 +5,7 @@ import IconsBlock from './IconsBlock/IconsBlock'
 import ImageBlock from './ImageBlock/ImageBlock'
 import MainMenu from './MainMenu/MainMenu'
 import QuoteBlock from './QuoteBlock/QuoteBlock'
+import SearchForm from './SearchForm/SearchForm'
 import Testimonial from './Testimonial/Testimonial'
 
 export {
@@ -15,5 +16,6 @@ export {
   ImageBlock,
   MainMenu,
   QuoteBlock,
+  SearchForm,
   Testimonial
 }
