@@ -120,6 +120,11 @@ $animation-durations: (
   to { opacity: 1; transform: translateX(0); }
 }
 
+@keyframes slide-left-fade-in {
+  from { opacity: 0; transform: translateX(1rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 @keyframes slide-left-fade-out {
   from { opacity: 1; transform: translateX(0); }
   to { opacity: 0; transform: translateX(-1rem); }
@@ -132,6 +137,11 @@ $animation-durations: (
 
 %slide-right-fade-in {
   animation-name: slide-right-fade-in;
+  animation-fill-mode: forwards;
+}
+
+%slide-left-fade-in {
+  animation-name: slide-left-fade-in;
   animation-fill-mode: forwards;
 }
 
@@ -148,6 +158,11 @@ $animation-durations: (
 @each $duration, $value in $animation-durations {
   .slide-right-fade-in--#{$duration} {
     @extend %slide-right-fade-in;
+    animation-duration: $value;
+  }
+
+  .slide-left-fade-in--#{$duration} {
+    @extend %slide-left-fade-in;
     animation-duration: $value;
   }
 

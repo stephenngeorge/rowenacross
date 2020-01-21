@@ -1,3 +1,36 @@
 .article-list {
+  &__articles {
+    padding: 4rem 0;
+    background-color: rgba($color--neon-blue, .1);
 
+    .article {
+      margin-bottom: 2rem;
+      transition: box-shadow .4s ease, width .6s ease, min-height .6s ease;
+
+      background: #fff;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    .article--summary {
+      &:hover {
+        box-shadow: $shadow-hover;
+      }
+    }
+
+    .article--full {
+      .article__header {
+        position: relative;
+      }
+      .article-back-button {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }

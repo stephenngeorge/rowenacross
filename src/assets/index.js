@@ -3,6 +3,7 @@
  * ICONS (.svg)
  * ----------
  */
+import BACK_ARROW from './back-arrow.svg'
 import EMAIL_ICON from './email_icon.svg'
 import FACEBOOK_ICON from './facebook_icon.svg'
 import INSTAGRAM_ICON from './instagram_icon.svg'
@@ -21,6 +22,7 @@ import RO_SMILING from './Rowena_Portrait 1.jpg'
 import RO_SPEAKING from './ro_speaking.jpg'
 
 export {
+  BACK_ARROW,
   BIBLE_BACKGROUND,
   EMAIL_ICON,
   FACEBOOK_ICON,
