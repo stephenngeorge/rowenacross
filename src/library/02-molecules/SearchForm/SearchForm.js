@@ -15,14 +15,13 @@ import PropTypes from "prop-types"
 const SearchForm = ({
   additionalClasses,
   handleChange,
+  handleSubmit,
   value
 }) => {
   const classes = ["search-form", ...additionalClasses]
   return (
     <div className={`${classes.join(" ")}`}>
-      <form className="search-form__form text-container--narrow" onSubmit={e => {
-        e.preventDefault()
-      }}>
+      <form className="search-form__form text-container--narrow" onSubmit={ handleSubmit }>
         <div className="search-form__form-field">
           <input type="text" name="search" id="search" value={ value } onChange={ handleChange } onFocus={ handleChange } />
           <label htmlFor="search">Search for devotionals</label>
@@ -38,6 +37,7 @@ const SearchForm = ({
 SearchForm.propTypes = {
   additionalClasses: PropTypes.array,
   handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
 }
 

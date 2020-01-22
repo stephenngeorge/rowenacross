@@ -87,7 +87,6 @@
 button[disabled=true] {
   color: $color--mid;
   border-color: $color--mid;
-  pointer-events: none;
   
   &:hover {
     background-color: #fff;
