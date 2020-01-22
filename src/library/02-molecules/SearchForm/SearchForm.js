@@ -13,7 +13,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const SearchForm = ({
-  additionalClasses
+  additionalClasses,
+  handleChange,
+  value
 }) => {
   const classes = ["search-form", ...additionalClasses]
   return (
@@ -22,7 +24,7 @@ const SearchForm = ({
         e.preventDefault()
       }}>
         <div className="search-form__form-field">
-          <input type="text" name="search" id="search" />
+          <input type="text" name="search" id="search" value={ value } onChange={ handleChange } onFocus={ handleChange } />
           <label htmlFor="search">Search for devotionals</label>
         </div>
         <button className="search-form__submit-button" type="submit">
@@ -34,7 +36,9 @@ const SearchForm = ({
 }
 
 SearchForm.propTypes = {
-  additionalClasses: PropTypes.array
+  additionalClasses: PropTypes.array,
+  handleChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 }
 
 SearchForm.defaultProps = {

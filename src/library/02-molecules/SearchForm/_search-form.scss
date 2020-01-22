@@ -18,6 +18,8 @@
         font-family: $font-family-sans-serif;
         font-size: $font-size-lead;
         color: $color--mid;
+
+        transition: font-size .2s ease-out, top .2s ease-out;
       }
     }
 
@@ -25,9 +27,22 @@
       font-size: 1rem;
       font-family: $font-family-sans-serif;
       padding: .75rem;
+      padding-top: 1.5rem;
+      padding-bottom: .25rem;
       width: 100%;
       border: none;
-      border-bottom: .125rem solid $color--neon-blue-bright;
+      border-bottom: .125rem solid $color--mid;
+
+      transition: border-color .2s ease;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input:focus ~ label, input:not([value=""]) ~ label {
+      top: 20%;
+      font-size: .8rem;
     }
   }
 
@@ -47,10 +62,33 @@
 
     background-color: $color--light;
 
-    transition: color .2s ease-out, background-color .2s ease-out;
+    transition: color .2s ease-out, border-color .2s ease-out, background-color .2s ease-out;
     &:hover {
       color: $color--light;
       background-color: $color--neon-blue-bright;
     }
+  }
+}
+
+.form--valid {
+  input {
+    border-color: $color--neon-blue-bright;
+  }
+}
+
+.form--error {
+  input {
+    border-color: $color--complementary;
+  }
+}
+
+button[disabled=true] {
+  color: $color--mid;
+  border-color: $color--mid;
+  pointer-events: none;
+  
+  &:hover {
+    background-color: #fff;
+    color: $color--mid;
   }
 }
