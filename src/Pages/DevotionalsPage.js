@@ -51,7 +51,6 @@ const DevotionalsPage = () => {
     e.preventDefault()
     const searchTerm = formValue.toLowerCase()
     const filteredArticles = articles.filter(article => article.titleText.toLowerCase().match(searchTerm))
-    console.log(filteredArticles)
     setArticles(filteredArticles)
     setFormValue("")
     setSearchText(searchTerm)
