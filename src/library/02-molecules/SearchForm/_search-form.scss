@@ -1,5 +1,5 @@
 .search-form {
-  padding: 2rem 0;
+  padding: 3rem 0;
 
   &__form {
     display: flex;
@@ -79,8 +79,8 @@
 
 .form--error {
   input {
-    color: $color--complementary;
-    border-color: $color--complementary;
+    color: $color--dark;
+    border-color: $color--mid;
   }
 }
 
@@ -91,5 +91,19 @@ button[disabled=true] {
   &:hover {
     background-color: #fff;
     color: $color--mid;
+  }
+}
+
+.search-form__search-text {
+  margin-top: .5rem;
+
+  span {
+    cursor: pointer;
+    color: $color--neon-mulberry;
+    text-decoration: none;
+    transition: color .2s ease-out;
+    &:hover {
+      color: darken($color--neon-mulberry, 10%);
+    }
   }
 }

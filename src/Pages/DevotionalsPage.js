@@ -1,11 +1,28 @@
 import React, { useState } from 'react'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import { ArticleList, SearchForm } from '../library'
 import { ArticleListData } from '../library/data'
 
 const DevotionalsPage = () => {
+  const history = useHistory()
+  const location = useLocation()
   const [formValue, setFormValue] = useState("")
-  const [articles, setArticles] = useState(ArticleListData.articles)
+  
+  // get initial state
+  const getInitialArticles = () => {
+    let initialArticles = ArticleListData.articles
+    if (location.search.match(/search/)) {
+      let searchQuery = location.search.split("?search=")[1]
+      initialArticles = ArticleListData.articles.filter(a => a.titleText.toLowerCase().match(searchQuery))
+    }
+    
+    return initialArticles
+  }
+  const getInitialSearchText = () => location.search.match(/search/) ? location.search.split("?search=")[1] : ""
+
+  const [articles, setArticles] = useState(getInitialArticles())
+  const [searchText, setSearchText] = useState(getInitialSearchText())
 
   const handleChange = e => {
     // get DOM nodes
@@ -32,16 +49,31 @@ const DevotionalsPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log("test")
     const searchTerm = formValue.toLowerCase()
     const filteredArticles = articles.filter(article => article.titleText.toLowerCase().match(searchTerm))
     console.log(filteredArticles)
     setArticles(filteredArticles)
+    setFormValue("")
+    setSearchText(searchTerm)
+    history.push(`/devotionals?search=${searchTerm}`)
+  }
+
+  const showAll = () => {
+    setArticles(ArticleListData.articles)
+    setFormValue("")
+    setSearchText("")
+    history.push('/devotionals')
   }
 
   return (
     <div className="slide-left-fade-in--medium">
-      <SearchForm value={ formValue } handleChange={ handleChange } handleSubmit={ e => handleSubmit(e) } />
+      <SearchForm
+        searchText={ searchText }
+        value={ formValue }
+        handleChange={ handleChange }
+        handleSubmit={ e => handleSubmit(e) }
+        showAll={ showAll }
+      />
       <ArticleList articles={ articles } />
     </div>
   )

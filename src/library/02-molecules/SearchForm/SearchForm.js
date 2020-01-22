@@ -16,6 +16,8 @@ const SearchForm = ({
   additionalClasses,
   handleChange,
   handleSubmit,
+  searchText,
+  showAll,
   value
 }) => {
   const classes = ["search-form", ...additionalClasses]
@@ -30,6 +32,14 @@ const SearchForm = ({
           search
         </button>
       </form>
+      {
+        (searchText !== null && searchText.length > 0) &&
+        <div className="search-form__search-text text-container--narrow">
+          <p>
+            Showing results for "{ searchText }". <span onClick={ showAll }>Show all.</span>
+          </p>
+        </div>
+      }
     </div>
   )
 }
@@ -38,6 +48,8 @@ SearchForm.propTypes = {
   additionalClasses: PropTypes.array,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  searchText: PropTypes.string.isRequired,
+  showAll: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
 }
 
