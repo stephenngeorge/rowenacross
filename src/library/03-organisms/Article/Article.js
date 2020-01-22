@@ -28,6 +28,7 @@ const Article = ({
   const params = useParams()
 
   const [display, setDisplay] = useState(displayMode)
+  // bind URL query string to the display mode of the article
   useEffect(() => {
     if (params.title !== undefined) {
       // prepare text for comparison

@@ -22,9 +22,13 @@ const TitleGradient = ({
   titleTag,
   titleText
 }) => {
+  // validation checks if the HTML tag is between
+  // 1 - 6 and that the titleText is not an empty
+  // string.
   const validateTitle = (titleTag, titleText) => {
     let errors = []
 
+    // check valid HTML tag
     if (titleTag <= 0 || titleTag > 6) {
       errors.push({
         type: errorTypes.VALUE_OUT_OF_RANGE,
@@ -32,7 +36,7 @@ const TitleGradient = ({
         message: "titleTag prop must be a number between 1 and 6 (inclusive)"
       })
     }
-
+    // check text is not an empty string
     if (titleText.length <= 0) {
       errors.push({
         type: errorTypes.VALUE_INVALID,
@@ -66,7 +70,7 @@ const TitleGradient = ({
 TitleGradient.propTypes = {
   additionalClasses: PropTypes.array,
   shadows: PropTypes.bool,
-  titleTag: PropTypes.number,
+  titleTag: PropTypes.number, // <-- between 1 - 6
   titleText: PropTypes.string.isRequired
 }
 

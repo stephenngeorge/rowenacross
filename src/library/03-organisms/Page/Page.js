@@ -24,6 +24,8 @@ const Page = ({
 }) => {
   let location = useLocation()
 
+  // add padding to the bottom of the page 
+  // to compensate for the height of the footer
   useEffect(() => {
     const addPadding = () => {
       let page = document.querySelector('.page')
@@ -33,10 +35,10 @@ const Page = ({
         page.style.paddingBottom = `${footerHeight}px`
       }
     }
-    
+    // call function on page load and every resize event
     addPadding()
     window.addEventListener("resize", addPadding)
-
+    // clean up event listeners
     return () => window.removeEventListener("resize", addPadding)
   }, [])
 

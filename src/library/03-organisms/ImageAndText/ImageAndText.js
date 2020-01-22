@@ -49,10 +49,10 @@ const ImageAndText = ({
         }
       }
     }
-
+    // call function on page load and on every resize event
     setHeight()
     window.addEventListener("resize", setHeight)
-
+    // clean up event listeners
     return () => window.removeEventListener("resize", setHeight)
   }, [])
 

@@ -19,9 +19,12 @@ const Icon = ({
   linkUrl,
   size
 }) => {
+  // validation checks if the size props is one of the
+  // allowed values and if the file being rendered is
+  // an SVG
   const validateIcon = (icon, size) => {
     let errors = []
-
+    // check size
     if (["xs", "sm", "md", "lg", "xl"].indexOf(size) < 0) {
       errors.push({
         type: errorTypes.VALUE_OUT_OF_RANGE,
@@ -29,7 +32,7 @@ const Icon = ({
         message: "size prop must be one of 'xs', 'sm', 'md', 'lg' or 'xl'"
       })
     }
-
+    // check file extension
     if (icon.split(".").pop() !== "svg") {
       errors.push({
         type: errorTypes.UNALLOWED_FILE_TYPE,
@@ -65,7 +68,8 @@ Icon.propTypes = {
   additionalClasses: PropTypes.array,
   altText: PropTypes.string,
   icon: PropTypes.string.isRequired,
-  linkUrl: PropTypes.string
+  linkUrl: PropTypes.string,
+  size: PropTypes.string // <-- one of ['xs', 'sm', 'md', 'lg', 'xl']
 }
 
 Icon.defaultProps = {

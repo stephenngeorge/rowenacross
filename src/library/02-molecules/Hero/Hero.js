@@ -24,6 +24,8 @@ const Hero = ({
   titleTag,
   titleText
 }) => {
+  // set the height of the hero section by
+  // the value of the height prop
   useEffect(() => {
     const setHeight = () => {
       const hero = document.querySelector(".hero")
@@ -47,7 +49,7 @@ const Hero = ({
 
 Hero.propTypes = {
   additionalClasses: PropTypes.array,
-  heroHeight: PropTypes.number,
+  heroHeight: PropTypes.number, // <-- number of vh. Fullscreen would be 100
   imageAlt: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   titleTag: PropTypes.number,

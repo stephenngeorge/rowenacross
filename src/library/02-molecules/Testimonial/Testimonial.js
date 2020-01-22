@@ -19,6 +19,7 @@ const Testimonial = ({
   testimonialAttribution,
   testimonialText
 }) => {
+  // animate the text
   useEffect(() => {
     const animateText = entries => {
       entries.forEach(entry => {

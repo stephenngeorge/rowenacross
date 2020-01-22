@@ -20,6 +20,8 @@ const CoverImage = ({
   objectPos,
   parentScope
 }) => {
+  // set object-position, used for images where the focus is not the centre
+  // default is 50%, 50%
   useEffect(() => {
     const image = document.querySelector(`${parentScope} .cover-image img`)
 
@@ -28,7 +30,9 @@ const CoverImage = ({
     }
   }, [objectPos, parentScope])
 
-  const validateCoverImage = (objectPos) => {
+  // validation checks that the objectPos object
+  // contains properties x && y
+  const validateCoverImage = objectPos => {
     let errors = []
     let keys = Object.keys(objectPos)
     if (keys.indexOf("x") < 0 || keys.indexOf("y") < 0) {
@@ -63,7 +67,7 @@ CoverImage.propTypes = {
   imageAlt: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   objectPos: PropTypes.object,
-  parentScope: PropTypes.string
+  parentScope: PropTypes.string // <-- allows targetting of image within a specific component
 }
 
 CoverImage.defaultProps = {

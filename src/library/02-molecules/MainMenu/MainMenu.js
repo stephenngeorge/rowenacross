@@ -21,14 +21,19 @@ import React, { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import PropTypes from "prop-types"
 
+import * as errorTypes from '../../../utils/errorTypes'
+
 const MainMenu = ({
   additionalClasses,
   menuItems
 }) => {
+  // dynamically set the default menu theme based on the
+  // current page. On the homepage, menu should be light,
+  // on other pages, it should be dark.
   const location = useLocation()
   const defaultTheme = location.pathname === "/" ? "light" : "dark"
 
-
+  // function to bring the menu in and out of view.
   const toggleMenu = () => {
     const menuItems = document.querySelector('.main-menu__items')
 
@@ -38,6 +43,8 @@ const MainMenu = ({
   }
 
   const [colorTheme, setColorTheme] = useState(defaultTheme)
+  // switch the colour theme between "light" and "dark".
+  // This functionality is only required on the homepage.
   useEffect(() => {
     const switchTheme = () => {
       if (location.pathname === "/") {
@@ -47,13 +54,16 @@ const MainMenu = ({
         setColorTheme("dark")
       }
     }
-
+    // call function on page load and then on every scroll event
     switchTheme()
     window.addEventListener("scroll", switchTheme)
-    
+    // clean up event listener
     return () => window.removeEventListener("scroll", switchTheme)
   }, [colorTheme, location])
 
+  // determine if the menu should display in full mode (for larger breakpoints)
+  // or using the 'menu--collapsed' class (smaller breakpoints). In case of the
+  // latter, attach a click event listener to toggle the view of the menu items.
   useEffect(() => {
     const setMenuLayout = () => {
       const mainMenu = document.querySelector(".main-menu")
@@ -65,19 +75,21 @@ const MainMenu = ({
         }
       }
     }
-
+    // call function on page load and then on every scroll event
     setMenuLayout()
     window.addEventListener("resize", setMenuLayout)
-
+    // clean up event listener
     return () => window.removeEventListener("resize", setMenuLayout)
   }, [])
 
+  // validation checks the colorTheme prop is one of the
+  // allowed values.
   const validateMenu = colorTheme => {
     let errors = []
 
     if (["light", "dark"].indexOf(colorTheme) < 0) {
       errors.push({
-        type: "VALUE OUT OF RANGE",
+        type: errorTypes.VALUE_OUT_OF_RANGE,
         source: "MainMenu > props.colorTheme",
         message: "colorTheme prop must be one of 'light' or 'dark'"
       })

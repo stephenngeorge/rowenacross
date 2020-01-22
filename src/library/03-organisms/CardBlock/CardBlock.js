@@ -6,7 +6,6 @@
  * Card Block components render a number of Card atoms
  * on a light background.
  * 
- * Children must be <Card />.
  * @see 01-atoms/Card
  */
 
