@@ -8,22 +8,16 @@
       transition: box-shadow .4s ease, width .6s ease, min-height .6s ease;
 
       background: #fff;
-
-      &:nth-last-child(1) {
-        margin-bottom: 0;
-      }
+      // remove margin from last article
+      &:nth-last-child(1) { margin-bottom: 0; }
     }
 
     .article--summary {
-      &:hover {
-        box-shadow: $shadow-hover;
-      }
+      &:hover { box-shadow: $shadow-hover; }
     }
 
     .article--full {
-      .article__header {
-        position: relative;
-      }
+      .article__header { position: relative; }
       .article-back-button {
         display: block;
         position: absolute;

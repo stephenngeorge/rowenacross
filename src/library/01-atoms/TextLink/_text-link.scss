@@ -13,6 +13,9 @@
   width: 100%;
   z-index: 1;
   
+  // create box same size as link with a gradient
+  // that goes in the opposite direction. This enables
+  // the "gradient transition" effect to work.
   &::before {
     opacity: 0;
     position: absolute;

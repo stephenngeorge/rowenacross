@@ -1,4 +1,5 @@
 .page {
+  // ensure footer is always pushed to the bottom
   min-height: 100vh;
   position: relative;
 
@@ -13,8 +14,6 @@
   }
 }
 
-.page--padding-top {
-  main {
-    padding-top: 3.5rem;
-  }
-}
+// add padding to pages that don't have image banner at the top
+// this compensates for the height of the menu
+.page--padding-top main { padding-top: $menu-dark-height; }

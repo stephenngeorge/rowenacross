@@ -11,23 +11,11 @@
   }
 }
 
-.icon--xs {
-  width: 1.4rem;
-  height: 1.4rem;
-}
-.icon--sm {
-  width: 2rem;
-  height: 2rem;
-}
-.icon--md {
-  width: 3rem;
-  height: 3rem;
-}
-.icon--lg {
-  width: 3.8rem;
-  height: 3.8rem;
-}
-.icon--xl {
-  width: 4.6rem;
-  height: 4.6rem;
+
+// Icon Sizes
+@each $size, $value in $icon-sizes {
+  .icon--#{$size} {
+    width: $value;
+    height: $value;
+  }
 }

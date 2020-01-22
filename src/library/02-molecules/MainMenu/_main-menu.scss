@@ -38,6 +38,8 @@
   }
 }
 
+// DIFFERENT MENU COLOR THEMES
+// ----- Menu Light
 .main-menu--light {
   background: linear-gradient(
     to bottom,
@@ -47,22 +49,7 @@
   a {
     color: $color--light;
     z-index: 1;
-    // &::after {
-    //   display: none;
-    //   @include breakpoint("md") {
-    //     display: block;
-    //   }
-    //   background-color: rgba($color--neon-mulberry, .5);
-    //   z-index: -1;
-    // }
 
-    // &:hover::after {
-    //   display: none;
-    //   @include breakpoint("md") {
-    //     display: block;
-    //   }
-    //   box-shadow: 0 0 1rem .125rem rgba($color--neon-mulberry, 1);
-    // }
     &::after {
       border-color: $color--neon-mulberry;
     }
@@ -73,33 +60,16 @@
     }
   }
 }
-
+// ----- Menu Dark
 .main-menu--dark {
-  height: 3.5rem;
+  height: $menu-dark-height;
   background-color: rgba($color--dark, .98);
   box-shadow: $shadow-bottom;
 
   a {
     color: $color--light;
     z-index: 1;
-    // &::after {
-    //   display: none;
-    //   @include breakpoint("md") {
-    //     display: block;
-    //   }
-    //   background-color: rgba($color--neon-blue-bright, .5);
-    //   width: 60%;
-    //   height: 2rem;
-    //   z-index: -1;
-    // }
-
-    // &:hover::after {
-    //   display: none;
-    //   @include breakpoint("md") {
-    //     display: block;
-    //   }
-    //   box-shadow: 0 0 1rem .125rem rgba($color--neon-blue-bright, 1);
-    // }
+    
     &::after {
       border-color: $color--neon-blue-bright;
     }
@@ -109,12 +79,14 @@
   }
 }
 
+// ----- Menu Collapsed
+// for small breakpoints
 .menu--collapsed {
   button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 3.5rem;
+    height: $menu-dark-height;
     padding: 0 1.5rem;
     background: $color--dark;
     border: 1px solid $color--dark;
@@ -125,6 +97,7 @@
     }
 
     &:hover {
+      // make all lines in menu icon same width on hover
       div[class^="menu-icon--"] {
         width: 90%;
       }
@@ -140,7 +113,7 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    top: 3.5rem;
+    top: $menu-dark-height;
     left: -100%;
     overflow: hidden;
     background: $color--dark;
@@ -157,17 +130,21 @@
     transition: left .3s;
   }
   
+  // show menu on small breakpoints and overlay the
+  // rest of the site with a shadow
   .menu-items-onscreen {
     left: 0;
     box-shadow: 0 800px 0 800px rgba($color--dark, .6);
   }
 }
 
+// ----- Menu Icon
 .menu-icon {
   position: relative;
   width: 2rem;
   height: 2rem;
 
+  // styles common to all 3 lines of the icon
   > div {
     position: absolute;
     right: 0;
@@ -176,6 +153,7 @@
     transition: width .2s ease;
   }
 
+  // ----- adjust individual line widths
   &--top {
     width: 100%;
     top: 10%;

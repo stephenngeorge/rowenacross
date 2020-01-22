@@ -28,12 +28,26 @@ $color: (
 );
 
 // local variables
+$menu-dark-height:                   3.5rem;
 $text-glow--white:              0 0 .5rem #fff;
 $text-glow--neon-blue:          0 0 .25rem $color--neon-blue;
 
 $shadow-hover:                  0 3px .375rem 0 rgba(0, 0, 0, .7);
 $shadows: (
   "hover": $shadow-hover
+);
+
+$icon--xs:                      1.4rem;
+$icon--sm:                      2rem;
+$icon--md:                      3rem;
+$icon--lg:                      3.8rem;
+$icon--xl:                      4.6rem;
+$icon-sizes: (
+  "xs": $icon--xs,
+  "sm": $icon--sm,
+  "md": $icon--md,
+  "lg": $icon--lg,
+  "xl": $icon--xl
 );
 
 @import 'loriss';

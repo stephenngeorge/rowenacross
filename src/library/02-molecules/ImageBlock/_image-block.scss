@@ -1,20 +1,20 @@
-$max-width-local:     14rem;
+$max-width-local: 14rem;
 
 .image-block {
-  width:              100%;
-  background-color:   $color--grey;
-  border-top:         1px solid $color--neon-blue-bright;
-  padding:            2rem 0;
+  width: 100%;
+  background-color: $color--grey;
+  border-top: 1px solid $color--neon-blue-bright;
+  padding: 2rem 0;
 
   &__images {
-    width:            90%;
-    max-width:        map-get($breakpoints, "xl");
-    margin:           0 auto;
-    padding:          1rem .5rem;
+    width: 90%;
+    max-width: map-get($breakpoints, "xl");
+    margin: 0 auto;
+    padding: 1rem .5rem;
 
-    display:          flex;
-    flex-flow:        row nowrap;
-    overflow:         scroll;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: scroll;
   }
 
   .images__panel {

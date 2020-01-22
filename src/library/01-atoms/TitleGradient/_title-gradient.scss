@@ -3,7 +3,6 @@
   opacity: 0;
   h1, h2, h3,
   h4, h5, h6 {
-    // @include background--neon-gradient(to right);
     background-color: $color--neon-blue-bright;
     border: .25rem solid $color--dark;
     box-decoration-break: clone;
@@ -52,6 +51,7 @@
   }
 }
 
+// ----- animate shadows
 @keyframes animate-before {
   from {
     opacity: 0;

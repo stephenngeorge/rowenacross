@@ -1,3 +1,4 @@
+// COMMON ARTICLE STYLES
 .article {
   padding: 1.25rem;
   
@@ -16,6 +17,7 @@
   .article__header--title { color: $color--neon-mulberry; }
   .article__header--published-date { font-family: $font-family-serif; }
 
+  // default back button styles (displayed only on "full" mode)
   .article-back-button {
     display: none;
     background: none;
@@ -31,6 +33,8 @@
   }
 }
 
+// ARTICLE DISPLAY MODES
+// ----- Article Summary (displayMode: "summary")
 .article--summary {
   border-radius: .25rem;
   box-shadow: $base-shadow;
@@ -42,13 +46,9 @@
     flex-direction: row;
   }
   
-  .article__text-content {
-    flex-grow: 1;
-  }
+  .article__text-content { flex-grow: 1; }
 
-  .article__header {
-    padding-bottom: 1rem;
-  }
+  .article__header { padding-bottom: 1rem; }
 
   .article__body {
     padding-right: 1rem;
@@ -68,8 +68,10 @@
   }
 }
 
+// ----- Article Full (displayMode: "full")
 .article--full {
   width: 100% !important;
+  // min height as height cannot be animated
   min-height: 50vh;
   border-top: .25rem solid $color--neon-mulberry;
   border-bottom: .25rem solid $color--neon-mulberry;
@@ -85,23 +87,20 @@
     margin: 0 auto;
   }
 
-  .article__header {
-    margin-bottom: 1rem;
-  }
+  .article__header { margin-bottom: 1rem; }
 
-  p {
-    margin-bottom: .75rem;
-  }
+  p { margin-bottom: .75rem; }
 
-  .article__button-container {
-    max-height: 0px;
-  }
+  .article__button-container { max-height: 0px; }
+  
   .article__read-more-link {
     opacity: 0;
     pointer-events: none;
   }
 }
 
+
+// animate articles on page load
 @keyframes slide-left-fade-in-button {
   from { opacity: 0; transform: translate(1rem, -50%); }
   to { opacity: 1; transform: translate(0, -50%); }

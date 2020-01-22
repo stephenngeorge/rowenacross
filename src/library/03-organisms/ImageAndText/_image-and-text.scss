@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   overflow: visible;
-
+  // set width for two main sections
   > * {
     @include set-grid-span(12);
     @include breakpoint("lg") {
@@ -18,6 +18,7 @@
     align-items: center;
     order: 1;
 
+    // set width for all props.children
     > * {
       width: 100%;
       max-width: 34rem;
@@ -42,6 +43,7 @@
   }
 }
 
+// animate image on intersection
 @keyframes image-focus {
   from { transform: scale(1.05); }
   to { transform: scale(1); }
