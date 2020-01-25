@@ -25,6 +25,7 @@ import { Icon } from '../../01-atoms'
 
 const IconsBlock = ({
   additionalClasses,
+  animationThreshold,
   icons
 }) => {
   // animate icons
@@ -42,12 +43,12 @@ const IconsBlock = ({
     }
 
     let target = document.querySelector(".icons-block")
-    let options = { threshold: 1 }
+    let options = { threshold: animationThreshold }
     let observer = new IntersectionObserver(animateIcons, options)
     if (target !== null) observer.observe(target)
 
     return () => observer.unobserve(target)
-  }, [])
+  }, [animationThreshold])
 
   const classes = ["icons-block", ...additionalClasses]
   return (
@@ -59,11 +60,13 @@ const IconsBlock = ({
 
 IconsBlock.propTypes = {
   additionalClasses: PropTypes.array,
+  animationThreshold: PropTypes.number, // <-- between 0 - 1
   icons: PropTypes.array.isRequired
 }
 
 IconsBlock.defaultProps = {
-  additionalClasses: []
+  additionalClasses: [],
+  animationThreshold: 0
 }
 
 export default IconsBlock

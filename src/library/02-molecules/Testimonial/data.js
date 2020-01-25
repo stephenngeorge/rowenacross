@@ -13,8 +13,14 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  testimonialAttribution: "C, Bristol - after hearing some of Ro's teaching",
-  testimonialText: "I would like to thank you for helping me to stand up and be courageous when I needed to take God's path rather than continue to try and walk my own."
+  homepage: {
+    testimonialAttribution: "C, Bristol - after hearing some of Ro's teaching",
+    testimonialText: "I would like to thank you for helping me to stand up and be courageous when I needed to take God's path rather than continue to try and walk my own."
+  },
+  contactPage: {
+    testimonialAttribution: "C, London",
+    testimonialText: "thank you so much for a wonderful day on Saturday. It was wonderful from start to finish. God really used it to remind me of my primary call as an intercessor. Such a blessing"
+  }
 }
 
 export {

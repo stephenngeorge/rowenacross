@@ -14,26 +14,51 @@ import { FACEBOOK_ICON, EMAIL_ICON, INSTAGRAM_ICON } from '../../../assets'
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  icons: [
-    {
-      altText: "Facebook logo",
-      icon: FACEBOOK_ICON,
-      linkUrl: "https://facebook.com",
-      size: "sm"
-    },
-    {
-      altText: "Emaili Icon",
-      icon: EMAIL_ICON,
-      linkUrl: "https://google.co.uk",
-      size: "sm"
-    },
-    {
-      altText: "Instagram Icon",
-      icon: INSTAGRAM_ICON,
-      linkUrl: "https://instagram.com",
-      size: "sm"
-    }
-  ]
+  homepage: {
+    animationThreshold: 1,
+    icons: [
+      {
+        altText: "Facebook logo",
+        icon: FACEBOOK_ICON,
+        linkUrl: "https://facebook.com",
+        size: "sm"
+      },
+      {
+        altText: "Emaili Icon",
+        icon: EMAIL_ICON,
+        linkUrl: "https://google.co.uk",
+        size: "sm"
+      },
+      {
+        altText: "Instagram Icon",
+        icon: INSTAGRAM_ICON,
+        linkUrl: "https://instagram.com",
+        size: "sm"
+      }
+    ]
+  },
+  contactPage: {
+    icons: [
+      {
+        altText: "Facebook logo",
+        icon: FACEBOOK_ICON,
+        linkUrl: "https://facebook.com",
+        size: "md"
+      },
+      {
+        altText: "Emaili Icon",
+        icon: EMAIL_ICON,
+        linkUrl: "https://google.co.uk",
+        size: "md"
+      },
+      {
+        altText: "Instagram Icon",
+        icon: INSTAGRAM_ICON,
+        linkUrl: "https://instagram.com",
+        size: "md"
+      }
+    ]
+  }
 }
 
 export {

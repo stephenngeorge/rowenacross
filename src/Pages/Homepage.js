@@ -47,10 +47,10 @@ const Homepage = () => (
         magna eros. Aenean non nunc nunc. Vivamus aliquam imperdiet lacus nec placerat. 
         Sed non convallis lacus, eget porttitor lacus.
       </p>
-      <IconsBlock { ...IconsBlockData } />
+      <IconsBlock { ...IconsBlockData.homepage } />
     </ImageAndText>
-    <ImageBlock { ...ImageBlockData } />
-    <Testimonial { ...TestimonialData } />
+    <ImageBlock { ...ImageBlockData.homepage } />
+    <Testimonial { ...TestimonialData.homepage } />
     <QuoteBlock { ...QuoteBlockData } />
   </div>
 )

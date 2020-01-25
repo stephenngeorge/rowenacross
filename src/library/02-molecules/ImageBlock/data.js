@@ -12,27 +12,47 @@
 
 import {
   RO_AT_KEMPTON,
+  RO_AT_UCB,
   RO_CLOSE_UP,
-  RO_CURTAIN
+  RO_CURTAIN,
+  RO_WITH_MARTIN_SMITH
 } from '../../../assets'
 
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  images: [
-    {
-      alt: "Ro at Kempton Park",
-      src: RO_AT_KEMPTON
-    },
-    {
-      alt: "Ro close up",
-      src: RO_CLOSE_UP
-    },
-    {
-      alt: "Ro speaking",
-      src: RO_CURTAIN
-    }
-  ]
+  homepage: {
+    images: [
+      {
+        alt: "Ro at Kempton Park",
+        src: RO_AT_KEMPTON
+      },
+      {
+        alt: "Ro close up",
+        src: RO_CLOSE_UP
+      },
+      {
+        alt: "Ro behind a curtain",
+        src: RO_CURTAIN
+      }
+    ]
+  },
+  contactPage: {
+    images: [
+      {
+        alt: "Ro at UCB",
+        src: RO_AT_UCB
+      },
+      {
+        alt: "Ro close up",
+        src: RO_CLOSE_UP
+      },
+      {
+        alt: "Ro with Martin Smith",
+        src: RO_WITH_MARTIN_SMITH
+      }
+    ]
+  }
 }
 
 export {

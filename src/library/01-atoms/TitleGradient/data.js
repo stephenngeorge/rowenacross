@@ -13,14 +13,17 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  additionalClasses: [
-    'color--dark',
-    'font-family--sans-serif',
-    'font-weight--black'
-  ],
-  shadows: false,
-  titleTag: 1,
-  titleText: "Rowena Cross"
+  contactPage: {
+    additionalClasses: [
+      'color--dark',
+      'font-family--sans-serif',
+      'font-weight--black'
+    ],
+    backgroundColor: "neon-mulberry",
+    shadows: false,
+    titleTag: 1,
+    titleText: "Contact Rowena"
+  }
 }
 
 export {

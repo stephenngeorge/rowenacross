@@ -3,7 +3,11 @@ import { Route, Switch } from 'react-router-dom'
 import './App.scss'
 
 import { Page } from './library'
-import { DevotionalsPage, Homepage } from './Pages'
+import {
+  ContactPage,
+  DevotionalsPage,
+  Homepage
+} from './Pages'
 
 const App = () => (
   <div className="App">
@@ -11,6 +15,7 @@ const App = () => (
       <Switch>
         <Route path="/" component={ Homepage } exact />
         <Route path="/devotionals/:title?" component={ DevotionalsPage } />
+        <Route path="/contact" component={ ContactPage } />
       </Switch>
     </Page>
   </div>

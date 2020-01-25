@@ -19,7 +19,7 @@ $color--neon-blue-bright:     #2F9FFF;
 $color--neon-mulberry:        #C64B8C;
 $color--neon-mulberry-bright: #D781AE;
 $color--grey:                 #F8F8F8;
-$color: (
+$colors: (
   "neon-blue": $color--neon-blue,
   "neon-blue-bright": $color--neon-blue-bright,
   "neon-mulberry": $color--neon-mulberry,
@@ -62,3 +62,5 @@ html {
 .App {
   min-height: 100vh;
 }
+
+@import './styles/pages';
