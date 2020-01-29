@@ -51,7 +51,7 @@ const Homepage = () => (
     </ImageAndText>
     <ImageBlock { ...ImageBlockData.homepage } />
     <Testimonial { ...TestimonialData.homepage } />
-    <QuoteBlock { ...QuoteBlockData } />
+    <QuoteBlock { ...QuoteBlockData.homepage } />
   </div>
 )
 

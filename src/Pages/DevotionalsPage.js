@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 
-import { ArticleList, SearchForm } from '../library'
-import { ArticleListData } from '../library/data'
+import { ArticleList, SearchForm, QuoteBlock } from '../library'
+import { ArticleListData, QuoteBlockData } from '../library/data'
 
 const DevotionalsPage = () => {
   const history = useHistory()
@@ -66,6 +66,7 @@ const DevotionalsPage = () => {
 
   return (
     <div className="slide-left-fade-in--medium">
+      <QuoteBlock { ...QuoteBlockData.devotionalsPage } />
       <SearchForm
         searchText={ searchText }
         value={ formValue }

@@ -15,10 +15,18 @@ import { BIBLE_BACKGROUND } from '../../../assets'
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  imageAlt: "close up, blurred photo of an open Bible",
-  imageSrc: BIBLE_BACKGROUND,
-  quotation: "But my life is worth nothing to me unless I use it for finishing the work assigned me by the Lord Jesus—the work of telling others the Good News about the wonderful grace of God.",
-  quoteSource: "Acts 20:24"
+  homepage: {
+    imageAlt: "close up, blurred photo of an open Bible",
+    imageSrc: BIBLE_BACKGROUND,
+    quotation: "But my life is worth nothing to me unless I use it for finishing the work assigned me by the Lord Jesus—the work of telling others the Good News about the wonderful grace of God.",
+    quoteSource: "Acts 20:24"
+  },
+  devotionalsPage: {
+    imageAlt: "close up, blurred photo of an open Bible",
+    imageSrc: BIBLE_BACKGROUND,
+    quotation: "For the word of the Lord is right and true; he is faithful in all he does.",
+    quoteSource: "Psalm 33:4"
+  }
 }
 
 export {
