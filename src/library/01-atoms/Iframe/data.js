@@ -15,7 +15,7 @@ const data = {
   // PropName: prop value
   title: "Ro's sermons",
   width: "100%",
-  height: "450",
+  height: "360",
   options: {
     scrolling: "no",
     frameBorder: "no",

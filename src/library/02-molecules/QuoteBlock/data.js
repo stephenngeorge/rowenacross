@@ -26,6 +26,12 @@ const data = {
     imageSrc: BIBLE_BACKGROUND,
     quotation: "For the word of the Lord is right and true; he is faithful in all he does.",
     quoteSource: "Psalm 33:4"
+  },
+  talksPage: {
+    imageAlt: "close up, blurred photo of an open Bible",
+    imageSrc: BIBLE_BACKGROUND,
+    quotation: "How, then, can they call on the one they have not believed in? And how can they believe in the one of whom they have not heard? And how can they hear without someone preaching to them?",
+    quoteSource: "Romans 10: 14"
   }
 }
 
