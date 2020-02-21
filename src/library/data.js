@@ -16,6 +16,7 @@ import { data as HeroData } from './02-molecules/Hero/data'
 import { data as IconsBlockData } from './02-molecules/IconsBlock/data'
 import { data as ImageBlockData } from './02-molecules/ImageBlock/data'
 import { data as MainMenuData } from './02-molecules/MainMenu/data'
+import { data as PageBannerData } from './02-molecules/PageBanner/data'
 import { data as QuoteBlockData } from './02-molecules/QuoteBlock/data'
 import { data as SearchFormData } from './02-molecules/SearchForm/data'
 import { data as TestimonialData } from './02-molecules/Testimonial/data'
@@ -39,6 +40,7 @@ export {
   IconsBlockData,
   ImageBlockData,
   MainMenuData,
+  PageBannerData,
   QuoteBlockData,
   SearchFormData,
   TestimonialData,

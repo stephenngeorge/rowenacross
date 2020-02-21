@@ -13,6 +13,7 @@ import {
   IconsBlock,
   ImageBlock,
   MainMenu,
+  PageBanner,
   QuoteBlock,
   SearchForm,
   Testimonial
@@ -41,6 +42,7 @@ export {
   ImageBlock,
   MainMenu,
   Page,
+  PageBanner,
   QuoteBlock,
   SearchForm,
   Testimonial,

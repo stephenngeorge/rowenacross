@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 
-import { ArticleList, SearchForm, QuoteBlock } from '../library'
-import { ArticleListData, QuoteBlockData } from '../library/data'
+import { ArticleList, SearchForm, PageBanner, QuoteBlock } from '../library'
+import { ArticleListData, PageBannerData, QuoteBlockData } from '../library/data'
 
 const DevotionalsPage = () => {
   const history = useHistory()
@@ -66,7 +66,14 @@ const DevotionalsPage = () => {
 
   return (
     <div className="slide-left-fade-in--medium">
-      <QuoteBlock { ...QuoteBlockData.devotionalsPage } />
+      <PageBanner { ...PageBannerData }>
+        <p>
+          Here you can find Ro's writings. From personal stories and 
+          reflections on current cultural events, to Biblical commentary 
+          and written sermons. Search for key words below, or browse 
+          through the different posts.
+        </p>
+      </PageBanner>
       <SearchForm
         searchText={ searchText }
         value={ formValue }
@@ -75,6 +82,7 @@ const DevotionalsPage = () => {
         showAll={ showAll }
       />
       <ArticleList articles={ articles } />
+      <QuoteBlock { ...QuoteBlockData.devotionalsPage } />
     </div>
   )
 }
