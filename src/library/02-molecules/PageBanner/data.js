@@ -13,8 +13,14 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
-  titleTag: 1,
-  titleText: "Devotionals"
+  devotionals: {
+    titleTag: 1,
+    titleText: "Devotionals"
+  },
+  talks: {
+    titleTag: 1,
+    titleText: "Talks"
+  }
 }
 
 export {

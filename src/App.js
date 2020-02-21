@@ -6,7 +6,8 @@ import { Page } from './library'
 import {
   ContactPage,
   DevotionalsPage,
-  Homepage
+  Homepage,
+  TalksPage
 } from './Pages'
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
         <Route path="/" component={ Homepage } exact />
         <Route path="/devotionals/:title?" component={ DevotionalsPage } />
         <Route path="/contact" component={ ContactPage } />
+        <Route path="/talks" component={ TalksPage } />
       </Switch>
     </Page>
   </div>

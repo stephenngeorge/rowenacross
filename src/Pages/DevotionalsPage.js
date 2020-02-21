@@ -66,7 +66,7 @@ const DevotionalsPage = () => {
 
   return (
     <div className="slide-left-fade-in--medium">
-      <PageBanner { ...PageBannerData }>
+      <PageBanner { ...PageBannerData.devotionals }>
         <p>
           Here you can find Ro's writings. From personal stories and 
           reflections on current cultural events, to Biblical commentary 
