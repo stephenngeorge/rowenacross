@@ -13,6 +13,15 @@
 const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
+  title: "Ro's sermons",
+  width: "100%",
+  height: "450",
+  options: {
+    scrolling: "no",
+    frameBorder: "no",
+    allow: "autoplay",
+  },
+  src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/996879895&color=%23c64b8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
 }
 
 export {

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { PageBanner } from '../library'
-import { PageBannerData } from '../library/data'
+import { Iframe, PageBanner } from '../library'
+import { IframeData, PageBannerData } from '../library/data'
 
 const TalksPage = () => {
   return (
@@ -13,6 +13,7 @@ const TalksPage = () => {
           UK.
         </p>
       </PageBanner>
+      <Iframe { ...IframeData } />
     </div>
   )
 }
