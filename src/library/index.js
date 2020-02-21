@@ -1,6 +1,7 @@
 import {
   CoverImage,
   Icon,
+  Iframe,
   TextLink,
   Title,
   TitleGradient
@@ -38,6 +39,7 @@ export {
   Hero,
   Icon,
   IconsBlock,
+  Iframe,
   ImageAndText,
   ImageBlock,
   MainMenu,
