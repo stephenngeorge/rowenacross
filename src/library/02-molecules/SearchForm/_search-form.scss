@@ -122,7 +122,8 @@ button[disabled=true] {
   span {
     cursor: pointer;
     color: $color--neon-mulberry;
-    text-decoration: none;
+    font-family: $font-family-serif;
+    text-decoration: underline;
     transition: color .2s ease-out;
     &:hover {
       color: darken($color--neon-mulberry, 10%);
