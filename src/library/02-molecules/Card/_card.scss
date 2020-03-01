@@ -5,6 +5,10 @@
   box-shadow: $shadow-bottom;
   transition: box-shadow .2s ease-out;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   &:hover {
     box-shadow: $shadow-hover;
   }

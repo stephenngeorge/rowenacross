@@ -31,7 +31,7 @@ const TextLink = ({
       { linkText }
     </Link>
   ) : (
-    <a onClick={ handleClick } href={ linkUrl }>
+    <a onClick={ handleClick } href={ linkUrl } className={`${classes.join(" ")}`}>
       { linkText }
     </a>
   )

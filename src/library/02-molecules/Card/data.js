@@ -14,15 +14,15 @@ const data = {
   // add props here that your component will expect in the format:
   // PropName: prop value
   cardBlockOne: {
-    bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis sollicitudin commodo. Fusce tincidunt leo dictum, tempor mauris vel, eleifend metus. Praesent quam odio, fringilla vitae ligula in, euismod fringilla tortor.",
+    bodyText: "Rowena has been commissioned as an Archbishop's Evangelist. Her passion is for taking the Good News to the broken and the lost and to set people on fire for God.",
     linkText: "Find out more",
-    linkUrl: "/about",
-    linkVariation: "internal",
+    linkUrl: "https://archbishops-evangelists.uk/",
+    linkVariation: "external",
     titleLevel: 3,
     titleText: "Evangelist"
   },
   cardBlockTwo: {
-    bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis sollicitudin commodo. Fusce tincidunt leo dictum, tempor mauris vel, eleifend metus. Praesent quam odio, fringilla vitae ligula in, euismod fringilla tortor.",
+    bodyText: "Rowena is a passionate speaker and preacher. She has spoken in many contexts, from the local church, to large evangelist events and radio appearances.",
     linkText: "Listen to talks",
     linkUrl: "/talks",
     linkVariation: "internal",
@@ -30,7 +30,7 @@ const data = {
     titleText: "Speaker"
   },
   cardBlockThree: {
-    bodyText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis sollicitudin commodo. Fusce tincidunt leo dictum, tempor mauris vel, eleifend metus. Praesent quam odio, fringilla vitae ligula in, euismod fringilla tortor.",
+    bodyText: "Rowena has written many devotionals and biblical reflections as she herself has grown in her love of Scripture. As well as offering practical theological insight, these writings also serve as powerful culturally commentary.",
     linkText: "Read devotionals",
     linkUrl: "/devotionals",
     linkVariation: "internal",
