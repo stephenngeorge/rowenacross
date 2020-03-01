@@ -1,0 +1,29 @@
+.filters {
+  display: flex;
+  padding: 0;
+  padding-bottom: 3rem;
+
+  &-title {
+    text-transform: uppercase;
+    color: $color--mid;
+    padding-right: 2rem;
+  }
+
+  &__filters-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-family: $font-family-serif;
+    li {
+      text-transform: uppercase;
+      color: rgba($color--neon-mulberry, .4);
+      padding: 0 1rem;
+      transition: color .2s ease;
+
+      &:hover {
+        color: rgba($color--neon-mulberry, 1);
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import Card from './Card/Card'
+import Filters from './Filters/Filters'
 import Footer from './Footer/Footer'
 import Hero from './Hero/Hero'
 import IconsBlock from './IconsBlock/IconsBlock'
@@ -11,6 +12,7 @@ import Testimonial from './Testimonial/Testimonial'
 
 export {
   Card,
+  Filters,
   Footer,
   Hero,
   IconsBlock,

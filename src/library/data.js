@@ -12,6 +12,7 @@ import { data as TitleGradientData } from './01-atoms/TitleGradient/data'
 
 // import data objects from 02-molecules
 import { data as CardData } from './02-molecules/Card/data'
+import { data as FiltersData } from './02-molecules/Filters/data'
 import { data as FooterData } from './02-molecules/Footer/data'
 import { data as HeroData } from './02-molecules/Hero/data'
 import { data as IconsBlockData } from './02-molecules/IconsBlock/data'
@@ -37,6 +38,7 @@ export {
   TitleData,
   TitleGradientData,
   CardData,
+  FiltersData,
   FooterData,
   HeroData,
   IconsBlockData,

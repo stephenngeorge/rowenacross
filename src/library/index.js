@@ -9,6 +9,7 @@ import {
 
 import {
   Card,
+  Filters,
   Footer,
   Hero,
   IconsBlock,
@@ -35,6 +36,7 @@ export {
   Card,
   CardBlock,
   CoverImage,
+  Filters,
   Footer,
   Hero,
   Icon,

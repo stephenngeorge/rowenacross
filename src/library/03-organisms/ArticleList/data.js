@@ -18,7 +18,10 @@ const articlesData = [
     linkUrl: "/devotionals/the-first-must-be-last",
     publishedDate: "02/12/2019",
     titleText: "The first must be last",
-    id: 1
+    id: 1,
+    tags: [
+      'bible study'
+    ]
   },
   {
     articleSummary: "'A great wave of persecution began that day, sweeping over the church in Jerusalem; and all the believers except the apostles were scattered through the regions of Judea and Samaria.' Acts 8:1.",
@@ -26,7 +29,10 @@ const articlesData = [
     displayMode: "summary",
     linkUrl: "/devotionals/ucb-god-spot-persecution",
     titleText: "UCB God Spot: Persecution",
-    id: 2
+    id: 2,
+    tags: [
+      'ucb'
+    ]
   },
   {
     articleSummary: "'And so the Lord says, \"These people say they are mine. They honor me with their lips, but their hearts are far from me. And their worship of me is nothing but man-made rules learned by rote.\"' Isaiah 29:13.\n\nI have been reflecting a lot since our recent conference for women. The Holy Spirit moved in a way I have never seen before.",
@@ -34,7 +40,10 @@ const articlesData = [
     displayMode: "summary",
     linkUrl: "/devotionals/ucb-god-spot-lukewarmity-in-the-church",
     titleText: "UCB God Spot: Lukewarmity in the church",
-    id: 3
+    id: 3,
+    tags: [
+      'ucb'
+    ]
   },
   {
     articleSummary: "'You intended to harm me, but God intended it all for good. He brought me to this position so I could save the lives of many people.' Genesis 50:20.\n\nThis is one of my favourite verses.  I find this verse so reassuring. Joseph went through SO much that would have tipped most of us over the edge but through it all he didn't seek revenge (even when the opportunity was handed to him on a plate)",
@@ -42,7 +51,10 @@ const articlesData = [
     displayMode: "summary",
     linkUrl: "/devotionals/ucb-god-spot-braveheart-we-can-all-be-josephs",
     titleText: "UCB God Spot: Braveheart we can all be Josephs",
-    id: 4
+    id: 4,
+    tags: [
+      'ucb'
+    ]
   },
   {
     articleSummary: "\"David replied to the Philistine, \"You come to me with sword, spear, and javelin, but I come to you in the name of the Lord of Heaven's Armies—the God of the armies of Israel, whom you have defied. Today the Lord will conquer you, and I will kill you and cut off your head. And then I will give the dead bodies of your men to the birds and wild animals, and the whole world will know that there is a God in Israel! And everyone assembled here will know that the Lord rescues his people, but not with sword and spear. This is the Lord's battle, and he will give you to us!\". 1 Samuel 17:45-47.",
@@ -50,7 +62,10 @@ const articlesData = [
     displayMode: "summary",
     linkUrl: "/devotionals/ucb-god-spot-what-is-your-giant",
     titleText: "UCB God Spot: What is your giant?",
-    id: 5
+    id: 5,
+    tags: [
+      'ucb'
+    ]
   },
   {
     articleSummary: "As someone who does more and more public speaking as part of my calling this is particularly poignant. My huge desire is to be obedient and authentic to Jesus. But God is asking me to use my mouth - the very thing I have spent most of my life not liking.",
@@ -58,7 +73,10 @@ const articlesData = [
     displayMode: "summary",
     linkUrl: "/devotionals/ucb-god-spot-gossip",
     titleText: "UCB God Spot: Gossip",
-    id: 6
+    id: 6,
+    tags: [
+      'ucb'
+    ]
   },
   {
     articleSummary: "\"No, do not be afraid of those nations, for the Lord your God is among you, and he is a great and awesome God. The Lord your God will drive those nations out ahead of you little by little. You will not clear them away all at once, otherwise the wild animals would multiply too quickly for you.\" Deuteronomy 7:21-22.",
@@ -66,7 +84,10 @@ const articlesData = [
     displayMode: "summary",
     linkUrl: "/devotionals/ucb-god-spot-gods-timing-is-perfect",
     titleText: "UCB God Spot: God's timing is perfect",
-    id: 7
+    id: 7,
+    tags: [
+      'ucb'
+    ]
   }
 ]
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 
-import { ArticleList, SearchForm, PageBanner, QuoteBlock } from '../library'
-import { ArticleListData, PageBannerData, QuoteBlockData } from '../library/data'
+import { ArticleList, Filters, SearchForm, PageBanner, QuoteBlock } from '../library'
+import { ArticleListData, FiltersData, PageBannerData, QuoteBlockData } from '../library/data'
 
 const DevotionalsPage = () => {
   const history = useHistory()
@@ -57,6 +57,15 @@ const DevotionalsPage = () => {
     history.push(`/devotionals?search=${searchTerm}`)
   }
 
+  const handleFilter = filter => {
+    const searchTerm = filter.toLowerCase().replace(/\s/g, "")
+    const filteredArticles = ArticleListData.articles.filter(article => article.tags.map(tag => tag.toLowerCase().replace(/\s/g, "")).indexOf(searchTerm) >= 0)
+    setArticles(filteredArticles)
+    setFormValue("")
+    setSearchText(searchTerm)
+    history.push(`/devotionals?search=${searchTerm}`)
+  }
+
   const showAll = () => {
     setArticles(ArticleListData.articles)
     setFormValue("")
@@ -81,6 +90,7 @@ const DevotionalsPage = () => {
         handleSubmit={ e => handleSubmit(e) }
         showAll={ showAll }
       />
+      <Filters { ...FiltersData } handleClick={ handleFilter } />
       <ArticleList articles={ articles } />
       <QuoteBlock { ...QuoteBlockData.devotionalsPage } />
     </div>
