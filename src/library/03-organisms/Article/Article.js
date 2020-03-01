@@ -32,7 +32,7 @@ const Article = ({
   useEffect(() => {
     if (params.title !== undefined) {
       // prepare text for comparison
-      let localTitle = titleText.toLowerCase().replace(/\s/g, "-").replace(/:/g, "")
+      let localTitle = titleText.toLowerCase().replace(/\s/g, "-").replace(/:/g, "").replace(/\?/g, "").replace(/'/g, "")
       if (localTitle === params.title) setDisplay("full")
       else setDisplay("summary")
     }
