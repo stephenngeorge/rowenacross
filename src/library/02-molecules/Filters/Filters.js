@@ -24,7 +24,7 @@ const Filters = ({
   ]
   return (
     <section className={`${classes.join(" ")}`}>
-      <p className="filters-title">Filters</p>
+      <p className="filters-title">Filters:</p>
       <ul className="filters__filters-list">
         {
           filters.map(filter => {

@@ -83,6 +83,7 @@ const DevotionalsPage = () => {
           through the different posts.
         </p>
       </PageBanner>
+      <Filters { ...FiltersData } handleClick={ handleFilter } />
       <SearchForm
         searchText={ searchText }
         value={ formValue }
@@ -90,7 +91,6 @@ const DevotionalsPage = () => {
         handleSubmit={ e => handleSubmit(e) }
         showAll={ showAll }
       />
-      <Filters { ...FiltersData } handleClick={ handleFilter } />
       <ArticleList articles={ articles } />
       <QuoteBlock { ...QuoteBlockData.devotionalsPage } />
     </div>

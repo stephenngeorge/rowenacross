@@ -1,7 +1,6 @@
 .filters {
   display: flex;
   padding: 0;
-  padding-bottom: 3rem;
 
   &-title {
     text-transform: uppercase;
@@ -16,13 +15,15 @@
     font-family: $font-family-serif;
     li {
       text-transform: uppercase;
-      color: rgba($color--neon-mulberry, .4);
+      color: rgba($color--neon-mulberry, .7);
+      text-decoration: none;
       padding: 0 1rem;
       transition: color .2s ease;
 
       &:hover {
         color: rgba($color--neon-mulberry, 1);
         cursor: pointer;
+        text-decoration: underline;
       }
     }
   }
