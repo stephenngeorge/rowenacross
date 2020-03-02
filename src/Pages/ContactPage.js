@@ -13,6 +13,11 @@ const ContactPage = () => (
         then she would love to hear from you. Please follow the links below, get in 
         touch and Rowena will get back to you as soon as possible.
       </p>
+      <p className="color--dark text--lead">
+        Rowena is also the founder of <a href="http://www.estherministry.org.uk">Esther Ministry</a>, 
+        a ministry that was established to see people equipped, empowered and released into their 
+        true calling.
+      </p>
       <IconsBlock { ...IconsBlockData.contactPage } />
     </div>
     <ImageBlock { ...ImageBlockData.contactPage } />

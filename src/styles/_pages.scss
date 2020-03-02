@@ -1,5 +1,17 @@
 .contact-page {
   padding-top: 3rem;
+  p {
+    margin-bottom: 1rem;
+  }
+  a {
+    font-family: $font-family-serif;
+    color: $color--neon-blue;
+    transition: color .2s ease;
+    &:hover {
+      color: darken($color--neon-blue, 10%);
+    }
+  }
+  
   .icons-block {
     padding: 2rem 0;
   }
