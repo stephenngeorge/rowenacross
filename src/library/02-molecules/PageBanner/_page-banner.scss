@@ -3,9 +3,6 @@
   &__text {
     font-size: $font-size-lead;
     width: 100%;
-    @include breakpoint("md") {
-      width: 75%;
-    }
     p {
       font-size: inherit;
     }

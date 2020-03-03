@@ -10,6 +10,7 @@
 
   &__filters-list {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     list-style-type: none;
     font-family: $font-family-serif;
