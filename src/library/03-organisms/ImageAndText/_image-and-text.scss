@@ -2,6 +2,9 @@
   display: flex;
   flex-flow: row wrap;
   overflow: visible;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
   // set width for two main sections
   > * {
     @include set-grid-span(12);
