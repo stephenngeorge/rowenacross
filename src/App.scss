@@ -55,7 +55,9 @@ $icon-sizes: (
 @import './styles/animations';
 @import './library/library.scss';
 
-.text-container {
+.page-banner.text-container,
+.filters.text-container,
+.search-form__form.text-container {
   &--narrow { max-width: 60rem; }
   &--very-narrow { max-width: 45rem; }
 }

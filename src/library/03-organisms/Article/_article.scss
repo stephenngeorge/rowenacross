@@ -1,7 +1,6 @@
 // COMMON ARTICLE STYLES
 .article {
   padding: 1.25rem;
-  max-width: 60rem;
   
   p { color: $color--dark; }
 
@@ -40,6 +39,7 @@
   border-radius: .25rem;
   box-shadow: $base-shadow;
   min-height: 1vh;
+  max-width: 60rem;
 
   display: flex;
   flex-direction: column;
