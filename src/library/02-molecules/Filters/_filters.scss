@@ -16,13 +16,13 @@
     font-family: $font-family-serif;
     li {
       text-transform: uppercase;
-      color: rgba($color--neon-mulberry, .7);
+      color: rgba($color--brand-red, .7);
       text-decoration: none;
       padding: 0 1rem;
       transition: color .2s ease;
 
       &:hover {
-        color: rgba($color--neon-mulberry, 1);
+        color: rgba($color--brand-red, 1);
         cursor: pointer;
         text-decoration: underline;
       }

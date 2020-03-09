@@ -18,7 +18,6 @@ import * as errorTypes from '../../../utils/errorTypes'
 
 const TitleGradient = ({
   additionalClasses,
-  backgroundColor,
   shadows,
   titleTag,
   titleText
@@ -63,14 +62,13 @@ const TitleGradient = ({
   ]
   return validateTitle(titleTag, titleText).length > 0 ? null : (
     <div className={`${classes.join(" ")}`}>
-      <Markup className={`bg--${backgroundColor}`}>{ titleText }</Markup>
+      <Markup>{ titleText }</Markup>
     </div>
   )
 }
 
 TitleGradient.propTypes = {
   additionalClasses: PropTypes.array,
-  backgroundColor: PropTypes.string,
   shadows: PropTypes.bool,
   titleTag: PropTypes.number, // <-- between 1 - 6
   titleText: PropTypes.string.isRequired
@@ -78,7 +76,6 @@ TitleGradient.propTypes = {
 
 TitleGradient.defaultProps = {
   additionalClasses: [],
-  backgroundColor: "neon-blue-bright",
   shadows: true,
   titleTag: 1
 }

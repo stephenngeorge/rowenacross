@@ -5,10 +5,10 @@
   }
   a {
     font-family: $font-family-serif;
-    color: $color--neon-blue;
+    color: $color--brand-red;
     transition: color .2s ease;
     &:hover {
-      color: darken($color--neon-blue, 10%);
+      color: darken($color--brand-red, 10%);
     }
   }
   

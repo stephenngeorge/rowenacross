@@ -1,7 +1,7 @@
 .article-list {
   &__articles {
     padding: 4rem 0;
-    background-color: rgba($color--neon-blue, .1);
+    background-color: rgba($color--grey, 1);
 
     .article {
       margin-bottom: 2rem;
@@ -30,5 +30,8 @@
 }
 
 .article-list.no-results {
-  background-color: rgba($color--neon-mulberry, .8);
+  background-color: rgba($color--brand-red, 1);
+  .article-list__articles {
+    background: none;
+  }
 }

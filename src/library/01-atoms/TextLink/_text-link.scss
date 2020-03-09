@@ -1,37 +1,43 @@
 .text-link {
-  @include background--mulberry-gradient(to right);
+  // @include background--mulberry-gradient(to right);
   position: relative;
   border: 3px solid $color--dark;
+  border-radius: .25rem;
+  background-color: $color--dark;
   color: #fff;
   font-family: $font-family-serif;
   padding: .5rem;
   text-align: center;
   text-decoration: none;
-  text-shadow: $text-glow--white;
   text-transform: uppercase;
   transition: background-image .4s ease;
   width: 100%;
   z-index: 1;
+
+  transition: background-color .2s ease;
+  &:hover {
+    background-color: darken($color--dark, 10%);
+  }
   
   // create box same size as link with a gradient
   // that goes in the opposite direction. This enables
   // the "gradient transition" effect to work.
-  &::before {
-    opacity: 0;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    @include background--mulberry-gradient(to left);
-    z-index: -1;
-    transition: opacity .4s ease-out;
-  }
+  // &::before {
+  //   opacity: 0;
+  //   position: absolute;
+  //   content: "";
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   @include background--mulberry-gradient(to left);
+  //   z-index: -1;
+  //   transition: opacity .4s ease-out;
+  // }
 
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-  }
+  // &:hover {
+  //   &::before {
+  //     opacity: 1;
+  //   }
+  // }
 }

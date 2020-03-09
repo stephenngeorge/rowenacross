@@ -19,7 +19,6 @@ const data = {
       'font-family--sans-serif',
       'font-weight--black'
     ],
-    backgroundColor: "neon-mulberry",
     shadows: false,
     titleTag: 1,
     titleText: "Contact Rowena"

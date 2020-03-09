@@ -72,11 +72,12 @@
     min-height: 3rem;
     z-index: 1;
 
-    border: 3px solid $color--neon-blue-bright;
+    border: 2px solid $color--dark;
+    border-radius: .25rem;
     font-family: $font-family-serif;
     font-size: $font-size-base;
     text-transform: uppercase;
-    color: $color--neon-blue-bright;
+    color: $color--dark;
     text-shadow: $text-glow--white;
 
     background-color: $color--light;
@@ -84,7 +85,7 @@
     transition: color .2s ease-out, border-color .2s ease-out, background-color .2s ease-out;
     &:hover {
       color: $color--light;
-      background-color: $color--neon-blue-bright;
+      background-color: $color--dark;
     }
   }
 }
@@ -93,7 +94,7 @@
 .form--valid {
   input {
     color: $color--dark;
-    border-color: $color--neon-blue-bright;
+    border-color: $color--brand-red;
   }
 }
 
@@ -121,12 +122,12 @@ button[disabled=true] {
 
   span {
     cursor: pointer;
-    color: $color--neon-mulberry;
+    color: $color--brand-red;
     font-family: $font-family-serif;
     text-decoration: underline;
     transition: color .2s ease-out;
     &:hover {
-      color: darken($color--neon-mulberry, 10%);
+      color: darken($color--brand-red, 10%);
     }
   }
 }

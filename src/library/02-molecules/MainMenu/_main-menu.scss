@@ -51,7 +51,7 @@
     z-index: 1;
 
     &::after {
-      border-color: $color--neon-mulberry;
+      border-color: $color--brand-red;
     }
     @include breakpoint("md") {
       &:hover::after {
@@ -71,7 +71,7 @@
     z-index: 1;
     
     &::after {
-      border-color: $color--neon-blue-bright;
+      border-color: $color--brand-red;
     }
     &:hover::after {
       width: 70%;

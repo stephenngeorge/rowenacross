@@ -14,9 +14,9 @@
     font-size: $font-size-small;
   }
   a {
-    color: $color--neon-blue-bright;
+    color: $color--brand-red;
     &:hover {
-      color: darken($color--neon-blue-bright, 10%);
+      color: darken($color--brand-red, 10%);
     }
   }
 }

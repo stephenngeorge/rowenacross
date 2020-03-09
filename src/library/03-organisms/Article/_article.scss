@@ -14,7 +14,7 @@
     }
   }
 
-  .article__header--title { color: $color--neon-mulberry; }
+  .article__header--title { color: $color--brand-red; }
   .article__header--published-date { font-family: $font-family-serif; }
 
   // default back button styles (displayed only on "full" mode)
@@ -74,8 +74,8 @@
   width: 100% !important;
   // min height as height cannot be animated
   min-height: 50vh;
-  border-top: .25rem solid $color--neon-mulberry;
-  border-bottom: .25rem solid $color--neon-mulberry;
+  border-top: .25rem solid $color--brand-red;
+  border-bottom: .25rem solid $color--brand-red;
 
   .article__text-content {
     @include set-grid-span(12);

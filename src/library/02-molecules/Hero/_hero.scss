@@ -11,7 +11,17 @@
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 50%);
-    font-family: $font-family-sans-serif;
-    font-weight: $font-weight-heavy;
+    overflow: visible;
+
+    h1 {
+      font-family: 'Neon', sans-serif !important;
+      font-size: 3rem;
+      color: $color--brand-red;
+      text-shadow:  0 0 .8rem $color--brand-red,
+                    0 0 .5rem #fff,
+                    0 0 .8rem #fff;
+      text-transform: unset;
+      letter-spacing: -1px;
+    }
   }
 }
