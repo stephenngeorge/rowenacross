@@ -15,7 +15,10 @@
 
     h1 {
       font-family: $font-family-cursive;
-      font-size: 5rem;
+      font-size: 3.8rem;
+      @include breakpoint("md") {
+        font-size: 5rem;
+      }
       font-weight: 400;
       color: $color--light;
       text-transform: unset;
