@@ -7,14 +7,6 @@ $font-family-sans-serif: 'Source Sans Pro', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
 $font-family-cursive: 'Sacramento', cursive;
 
-@font-face {
-  font-family: 'Neon';
-  src:  url('./assets/Neon.woff2') format('woff2'),
-        url('./assets/Neon.woff') format('woff'),
-        url('./assets/Neon.eot') format('embedded-opentype');
-  font-weight: 400;
-  font-style: normal;
-}
 
 $font-weight-bold:              600;
 $font-weight-black:             900;
