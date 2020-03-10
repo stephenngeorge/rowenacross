@@ -14,15 +14,33 @@
     overflow: visible;
 
     h1 {
-      font-family: 'Neon', sans-serif !important;
-      font-size: 3rem;
+      font-family: $font-family-cursive;
+      font-size: 5rem;
       font-weight: 400;
-      color: $color--brand-red;
-      text-shadow:  0 0 .8rem $color--brand-red,
-                    0 0 .5rem #fff,
-                    0 0 .8rem #fff;
+      color: $color--light;
       text-transform: unset;
-      letter-spacing: -1px;
+      line-height: 1;
+
+      animation: glow 1.4s ease-in-out infinite alternate;
     }
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow:  0 0 .5rem $color--light,
+                  0 0 1rem $color--light,
+                  0 0 1.5rem $color--brand-red,
+                  0 0 2rem $color--brand-red,
+                  0 0 2.5rem $color--brand-red,
+                  0 0 3rem $color--brand-red;
+  }
+  to {
+    text-shadow:  0 0 1rem $color--light,
+                  0 0 1.5rem darken($color--brand-red, 5%),
+                  0 0 2rem darken($color--brand-red, 5%),
+                  0 0 2.5rem darken($color--brand-red, 5%),
+                  0 0 3rem darken($color--brand-red, 5%),
+                  0 0 3.5rem darken($color--brand-red, 5%),
   }
 }
